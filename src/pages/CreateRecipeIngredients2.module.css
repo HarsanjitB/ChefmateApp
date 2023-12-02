@@ -1,0 +1,189 @@
+.createRecipeIngredientsChild {
+  position: absolute;
+  top: -43px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--colour-styles-secondary-colour-secondary-80);
+  filter: blur(417px);
+  width: 308px;
+  height: 106px;
+  display: none;
+}
+.line {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: calc(50% - 67.5px);
+  border-radius: var(--br-81xl);
+  background-color: var(--colour-styles-label-colour);
+  width: 135px;
+  height: 5px;
+}
+.homeIndicator {
+  position: absolute;
+  top: 778px;
+  left: 0;
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 375px;
+  height: 34px;
+  overflow: hidden;
+}
+.component4Icon {
+  position: absolute;
+  top: 769px;
+  left: 162px;
+  width: 50px;
+  height: 24px;
+  display: none;
+}
+.label {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+}
+.tabs {
+  position: absolute;
+  top: calc(50% + 163px);
+  left: calc(50% - 160.5px);
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  width: 320px;
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-neutral-colour-white);
+}
+.ingredients {
+  position: absolute;
+  top: calc(50% - 211px);
+  left: calc(50% - 163.5px);
+  font-weight: 600;
+}
+.vectorIcon {
+  height: 1.52%;
+  width: 2.78%;
+  top: 54.92%;
+  right: 56.61%;
+  bottom: 43.57%;
+  left: 40.6%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.bg,
+.onion,
+.vectorIcon {
+  position: absolute;
+}
+.bg {
+  top: calc(50% - 38px);
+  left: calc(50% - 157.5px);
+  border-radius: var(--br-xs);
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 315px;
+  height: 76px;
+  opacity: 0.5;
+}
+.onion {
+  top: calc(50% - 9px);
+  left: calc(50% - 74.5px);
+  font-weight: 600;
+}
+.imageIcon {
+  position: absolute;
+  top: calc(50% - 26px);
+  left: calc(50% - 142.5px);
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+}
+.searchChild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  border: 1.3px solid var(--colour-styles-neutral-colour-gray-4);
+  box-sizing: border-box;
+}
+.vuesaxoutlinesearchNormalIcon {
+  position: absolute;
+  height: 45.19%;
+  width: 6.9%;
+  top: 27.41%;
+  right: 89.31%;
+  bottom: 27.41%;
+  left: 3.79%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  display: none;
+}
+.placeholder {
+  position: absolute;
+  top: 17.78%;
+  left: 14.83%;
+  display: none;
+}
+.search,
+.searchWrapper {
+  position: absolute;
+  top: calc(50% - 13.5px);
+  left: calc(50% - 14.5px);
+  width: 29px;
+  height: 27px;
+}
+.searchWrapper {
+  top: calc(50% - 14px);
+  left: calc(50% + 110.5px);
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-neutral-colour-gray-4);
+}
+.recipe10 {
+  position: absolute;
+  top: calc(50% - 83px);
+  left: calc(50% - 160.5px);
+  width: 315px;
+  height: 76px;
+}
+.checkBold,
+.vectorIcon1 {
+  position: absolute;
+  top: 106px;
+  left: 323px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.vectorIcon1 {
+  height: 3.18%;
+  width: 4.39%;
+  top: 39.14%;
+  right: 19.98%;
+  bottom: 57.68%;
+  left: 75.64%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.createRecipeIngredients {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+  height: 488px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-style-normal-text-bold-size);
+  color: var(--colour-styles-label-colour);
+  font-family: var(--text-style-smaller-text-small-label);
+}

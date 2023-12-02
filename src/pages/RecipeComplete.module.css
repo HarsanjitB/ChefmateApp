@@ -1,0 +1,235 @@
+.recipeCompleteChild {
+  position: absolute;
+  top: 384px;
+  left: 28px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-300);
+  width: 316px;
+  height: 93px;
+}
+.writeHere {
+  position: absolute;
+  top: 394px;
+  left: 38px;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-neutral-colour-black);
+  text-align: left;
+}
+.addTimer,
+.addTimerText {
+  position: absolute;
+  height: 38px;
+}
+.addTimerText {
+  top: 0;
+  left: 1px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 157px;
+}
+.addTimer {
+  top: 672px;
+  left: 112px;
+  border-radius: var(--br-lgi);
+  background-color: #faff0a;
+  width: 158px;
+  overflow: hidden;
+  font-size: var(--text-style-normal-text-bold-size);
+}
+.addTimer1,
+.addTimerText1 {
+  position: absolute;
+  height: 56px;
+}
+.addTimerText1 {
+  top: 0;
+  left: 1px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 231px;
+}
+.addTimer1 {
+  top: 725px;
+  left: 74px;
+  border-radius: var(--br-lgi);
+  background-color: var(--color-darkred);
+  width: 232px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: var(--font-size-2xl);
+}
+.imageChild {
+  position: absolute;
+  top: 0.7px;
+  left: -0.5px;
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 160px;
+  height: 117.9px;
+}
+.navBarMenu {
+  position: absolute;
+  height: 29.51%;
+  width: 22.5%;
+  top: 28.67%;
+  right: 39.38%;
+  bottom: 41.82%;
+  left: 38.13%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.addMedia {
+  position: absolute;
+  top: 74px;
+  left: 41px;
+  font-weight: 600;
+  display: inline-block;
+  width: 77px;
+  height: 16px;
+}
+.image {
+  position: absolute;
+  top: 527px;
+  left: 110px;
+  width: 160px;
+  height: 118.6px;
+  color: var(--colour-styles-neutral-colour-black);
+}
+.label {
+  position: relative;
+}
+.frameChild,
+.frameItem {
+  position: relative;
+  border-radius: var(--br-12xs-5);
+  width: 28px;
+  height: 28px;
+}
+.frameItem {
+  width: 29px;
+}
+.component7,
+.starParent {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-11xs) 0;
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+}
+.component7 {
+  position: absolute;
+  top: 207px;
+  left: 78px;
+  border-radius: var(--br-5xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  box-shadow: var(--depth-03);
+  width: 222px;
+  height: 119px;
+  flex-direction: column;
+  padding: var(--padding-3xs) var(--padding-mini);
+  gap: var(--gap-8xs);
+  text-align: left;
+}
+.stepOverview,
+.stepOverviewSection {
+  position: absolute;
+  width: 314px;
+  height: 114px;
+}
+.stepOverview {
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepOverviewSection {
+  top: 61px;
+  left: 33px;
+  font-size: var(--font-size-15xl);
+}
+.stepOverview1,
+.stepOverviewSection1 {
+  position: absolute;
+  width: 314px;
+  height: 51px;
+}
+.stepOverview1 {
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepOverviewSection1 {
+  top: 138px;
+  left: 33px;
+  font-size: 25px;
+}
+.stepOverview2,
+.stepOverviewSection2 {
+  position: absolute;
+  width: 316px;
+  height: 39px;
+}
+.stepOverview2 {
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepOverviewSection2 {
+  top: 345px;
+  left: 28px;
+  font-size: var(--text-style-large-text-bold-size);
+}
+.stepOverview3,
+.stepOverviewSection3 {
+  position: absolute;
+  width: 316px;
+  height: 40px;
+}
+.stepOverview3 {
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepOverviewSection3 {
+  top: 487px;
+  left: 28px;
+  font-size: var(--text-style-large-text-bold-size);
+}
+.headerIcon {
+  position: absolute;
+  top: 54px;
+  left: 30px;
+  width: 317px;
+  height: 24px;
+}
+.recipeComplete {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-lightgreen);
+  width: 100%;
+  height: 812px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--text-style-small-text-regular-size);
+  color: var(--colour-styles-label-colour);
+  font-family: var(--text-style-smaller-text-small-label);
+}

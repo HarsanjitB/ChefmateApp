@@ -1,0 +1,21 @@
+.rectangle6Container,
+.rectangle6ContainerParent {
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+}
+.rectangle6Container {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  border: 1.3px solid var(--color-darkred);
+  box-sizing: border-box;
+}
+.rectangle6ContainerParent {
+  position: relative;
+  height: 85px;
+  overflow: hidden;
+}

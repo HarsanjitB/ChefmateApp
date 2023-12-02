@@ -1,0 +1,153 @@
+.createAnAccountChild {
+  position: absolute;
+  top: -43px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-orange-100);
+  filter: blur(500px);
+  width: 308px;
+  height: 106px;
+  display: none;
+}
+.createYourAccount,
+.welcomeToChefmate {
+  position: absolute;
+  left: calc(50% - 157.5px);
+}
+.welcomeToChefmate {
+  top: calc(50% - 26px);
+  font-weight: 600;
+}
+.createYourAccount {
+  top: calc(50% + 9px);
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-label-colour);
+  display: inline-block;
+  width: 315px;
+}
+.frame1,
+.titttle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 315px;
+  height: 52px;
+}
+.frame1 {
+  left: 6.5px;
+  width: 317px;
+  overflow: hidden;
+}
+.frame,
+.frame2 {
+  position: absolute;
+  left: calc(50% - 165.5px);
+}
+.frame {
+  top: calc(50% - 328.5px);
+  width: 323.5px;
+  height: 52px;
+  overflow: hidden;
+}
+.frame2 {
+  top: calc(50% + 141.5px);
+}
+.signInNow {
+  text-decoration: underline;
+}
+.alreadyAMemberContainer {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50.25px);
+  font-weight: 500;
+  cursor: pointer;
+}
+.frame3,
+.frame4,
+.frame5 {
+  position: absolute;
+  left: calc(50% - 165.5px);
+}
+.frame3 {
+  bottom: 30px;
+  width: 253.5px;
+  height: 17px;
+  overflow: hidden;
+  font-size: var(--text-style-smaller-text-regular-size);
+}
+.frame4,
+.frame5 {
+  border: 0;
+  background-color: transparent;
+  top: calc(50% - 262.5px);
+}
+.frame5 {
+  top: calc(50% - 161.5px);
+}
+.label {
+  position: relative;
+  font-weight: 600;
+}
+.icongeneralarrowRight {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.bigButton {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 165px);
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-lg) var(--padding-66xl);
+  gap: var(--gap-2xs);
+  cursor: pointer;
+}
+.createAnAccountItem,
+.frame6 {
+  position: absolute;
+  overflow: hidden;
+}
+.frame6 {
+  top: calc(50% + 210.5px);
+  left: calc(50% - 165.5px);
+  width: 330px;
+  height: 60px;
+  text-align: center;
+  font-size: var(--text-style-normal-text-bold-size);
+  color: var(--colour-styles-neutral-colour-white);
+}
+.createAnAccountItem {
+  top: 387px;
+  left: 253px;
+  width: 100px;
+  height: 100px;
+}
+.inputField,
+.inputField1 {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50% - 60.5px);
+  left: calc(50% - 161px);
+}
+.inputField1 {
+  top: calc(50% + 40.5px);
+}
+.createAnAccount {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+  height: 795px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-style-large-text-bold-size);
+  color: var(--colour-styles-neutral-colour-black);
+  font-family: var(--text-style-smaller-text-small-label);
+}

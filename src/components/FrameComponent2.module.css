@@ -1,0 +1,431 @@
+.line {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: calc(50% - 67.5px);
+  border-radius: var(--br-81xl);
+  background-color: var(--colour-styles-label-colour);
+  width: 135px;
+  height: 5px;
+  display: none;
+}
+.filterChild,
+.homeIndicator {
+  position: absolute;
+  left: 0;
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 375px;
+}
+.homeIndicator {
+  top: 450px;
+  height: 34px;
+  overflow: hidden;
+}
+.filterChild {
+  top: 0;
+  border-radius: var(--br-31xl) var(--br-31xl) 0 0;
+  box-shadow: 0-4px 4px rgba(0, 0, 0, 0.4);
+  height: 450px;
+}
+.vuesaxlinearstarIcon,
+.vuesaxlinearstarIcon1 {
+  position: absolute;
+  top: 163px;
+  left: 180px;
+  width: 40px;
+  height: 40px;
+}
+.vuesaxlinearstarIcon1 {
+  left: 230px;
+}
+.filterSearch,
+.rating {
+  position: absolute;
+  top: 31px;
+  left: 143px;
+  font-size: var(--text-style-small-text-regular-size);
+  font-weight: 600;
+  color: var(--colour-styles-neutral-colour-black);
+}
+.rating {
+  top: 0;
+  left: 0;
+}
+.div {
+  position: relative;
+  font-weight: 500;
+}
+.vuesaxlinearstarIcon2 {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+.component1Child {
+  position: relative;
+  border-radius: var(--br-12xs-5);
+  width: 18px;
+  height: 18px;
+}
+.component1,
+.component2,
+.component3,
+.component4,
+.component5 {
+  position: absolute;
+  top: 31px;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkred);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  gap: var(--gap-8xs);
+}
+.component1 {
+  left: 0;
+  background-color: var(--color-darkred);
+  color: var(--color-whitesmoke-200);
+}
+.component2,
+.component3,
+.component4,
+.component5 {
+  left: 66px;
+  background-color: var(--color-whitesmoke-100);
+}
+.component3,
+.component4,
+.component5 {
+  left: 132px;
+  background-color: var(--colour-styles-neutral-colour-white);
+}
+.component4,
+.component5 {
+  left: 197px;
+}
+.component5 {
+  left: 262px;
+}
+.fiterrate {
+  position: absolute;
+  top: 358px;
+  left: 30px;
+  width: 309px;
+  height: 59px;
+}
+.div5 {
+  position: relative;
+}
+.component14Child {
+  position: relative;
+  border-radius: var(--br-12xs-5);
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+.component14 {
+  top: 0;
+  left: 126px;
+  background-color: var(--colour-styles-neutral-colour-white);
+}
+.component10,
+.component11,
+.component111,
+.component12,
+.component13,
+.component14,
+.component21,
+.component41,
+.component51,
+.component6,
+.component7,
+.component8,
+.component9 {
+  position: absolute;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkred);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  gap: var(--gap-8xs);
+}
+.component11 {
+  top: 31px;
+  left: 0;
+  background-color: var(--color-darkred);
+  color: var(--colour-styles-neutral-colour-white);
+}
+.component10,
+.component111,
+.component12,
+.component13,
+.component21,
+.component41,
+.component51,
+.component6,
+.component7,
+.component8,
+.component9 {
+  top: 68px;
+  left: 101px;
+  background-color: var(--colour-styles-neutral-colour-white);
+}
+.component10,
+.component111,
+.component12,
+.component13,
+.component41,
+.component51,
+.component6,
+.component7,
+.component8,
+.component9 {
+  top: 31px;
+  left: 41px;
+}
+.component10,
+.component111,
+.component12,
+.component13,
+.component51,
+.component6,
+.component7,
+.component8,
+.component9 {
+  left: 121px;
+}
+.component10,
+.component111,
+.component12,
+.component13,
+.component6,
+.component7,
+.component8,
+.component9 {
+  top: 105px;
+  left: 228px;
+}
+.component10,
+.component111,
+.component12,
+.component13,
+.component6,
+.component7,
+.component8 {
+  top: 68px;
+}
+.component111,
+.component12,
+.component13,
+.component6,
+.component7,
+.component8 {
+  top: 105px;
+  left: 159px;
+}
+.component12,
+.component13,
+.component6,
+.component7,
+.component8 {
+  top: 31px;
+  left: 183px;
+}
+.component13,
+.component6,
+.component7,
+.component8 {
+  top: 105px;
+  left: 0;
+}
+.component13,
+.component7,
+.component8 {
+  left: 59px;
+}
+.component13,
+.component8 {
+  top: 68px;
+  left: 0;
+}
+.component13 {
+  top: 31px;
+  left: 247px;
+}
+.filtercategory,
+.mealTypeParent {
+  position: absolute;
+  top: 41px;
+  left: 0;
+  width: 309px;
+  height: 132px;
+}
+.filtercategory {
+  top: 172px;
+  left: 30px;
+  height: 173px;
+}
+.label {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  width: 114px;
+  flex-shrink: 0;
+}
+.smallButton {
+  position: absolute;
+  top: 436px;
+  left: 30px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  width: 309px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-11xl);
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  color: var(--colour-styles-neutral-colour-white);
+}
+.filter1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 375px;
+  height: 484px;
+}
+.dietaryRestrictions {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  font-size: var(--text-style-small-text-regular-size);
+  font-weight: 600;
+  color: var(--colour-styles-neutral-colour-black);
+}
+.component22,
+.component31,
+.component91 {
+  position: absolute;
+  top: 64px;
+  left: 93px;
+  border-radius: var(--br-3xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  border: 1px solid var(--color-darkred);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  gap: var(--gap-8xs);
+}
+.component31,
+.component91 {
+  left: 0;
+}
+.component91 {
+  top: 31px;
+}
+.component42 {
+  top: 97px;
+  left: 0;
+  box-sizing: border-box;
+  width: 48px;
+  text-align: center;
+}
+.component42,
+.component52,
+.component61,
+.component71,
+.component81 {
+  position: absolute;
+  border-radius: var(--br-3xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  border: 1px solid var(--color-darkred);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  gap: var(--gap-8xs);
+}
+.component52 {
+  top: 31px;
+  left: 181px;
+  box-sizing: border-box;
+  width: 57px;
+}
+.component61,
+.component71,
+.component81 {
+  top: 97px;
+  left: 59px;
+}
+.component71,
+.component81 {
+  top: 31px;
+  left: 103px;
+}
+.component71 {
+  top: 64px;
+  left: 190px;
+}
+.dietaryRestrictionsParent {
+  position: absolute;
+  top: 75px;
+  left: 28px;
+  width: 276px;
+  height: 124px;
+}
+.vuesaxoutlinesetting4Icon {
+  position: absolute;
+  height: 4.13%;
+  width: 5.31%;
+  top: 6.61%;
+  right: 31.56%;
+  bottom: 89.26%;
+  left: 63.13%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.filter {
+  position: relative;
+  width: 377px;
+  height: 484px;
+  z-index: 0;
+}
+.filterParent,
+.frameChild {
+  max-width: 100%;
+  max-height: 100%;
+}
+.frameChild {
+  position: absolute;
+  margin: 0 !important;
+  height: 3.57%;
+  width: 4.59%;
+  top: 22.93%;
+  right: 11.59%;
+  bottom: 73.49%;
+  left: 83.82%;
+  overflow: hidden;
+  z-index: 1;
+}
+.filterParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: var(--gap-3xs);
+  overflow: auto;
+  text-align: left;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--color-darkred);
+  font-family: var(--text-style-smaller-text-small-label);
+}

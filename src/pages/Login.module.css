@@ -1,0 +1,156 @@
+.loginChild {
+  position: absolute;
+  top: -43px;
+  left: 18px;
+  border-radius: 50%;
+  background-color: var(--color-orange-100);
+  filter: blur(500px);
+  width: 308px;
+  height: 106px;
+  display: none;
+}
+.hello {
+  position: relative;
+  font-weight: 600;
+}
+.frame,
+.frame1,
+.titttle {
+  display: flex;
+  justify-content: center;
+}
+.titttle {
+  flex-direction: row;
+  align-items: center;
+}
+.frame,
+.frame1 {
+  overflow: hidden;
+  flex-direction: column;
+}
+.frame1 {
+  align-self: stretch;
+  align-items: flex-start;
+}
+.frame {
+  position: absolute;
+  top: calc(50% - 279.5px);
+  left: calc(50% - 162px);
+  width: 315px;
+  align-items: flex-end;
+  text-align: left;
+  font-size: var(--text-style-header-text-bold-size);
+}
+.forgotPassword {
+  position: relative;
+}
+.frame3,
+.inputField,
+.inputField1 {
+  position: absolute;
+  left: calc(50% - 162px);
+}
+.frame3 {
+  top: calc(50% + 63.5px);
+  width: 315px;
+  height: 17px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: #b04d4d;
+}
+.inputField,
+.inputField1 {
+  border: 0;
+  background-color: transparent;
+  top: calc(50% - 121.5px);
+}
+.inputField1 {
+  top: calc(50% - 23.5px);
+}
+.label {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+}
+.icongeneralarrowRight {
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 20px;
+  display: none;
+}
+.bigButton,
+.bigButton1 {
+  position: absolute;
+  left: calc(50% - 162px);
+  border-radius: var(--br-3xs);
+  width: 315px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: var(--gap-2xs);
+  cursor: pointer;
+  color: var(--colour-styles-neutral-colour-white);
+}
+.bigButton {
+  top: calc(50% + 99.5px);
+  background-color: var(--color-darkred);
+  padding: var(--padding-lg) var(--padding-66xl);
+}
+.bigButton1 {
+  top: calc(50% + 196.5px);
+  background-color: #9d8787;
+  padding: var(--padding-lg) 20px;
+}
+.letsMakeCooking,
+.signInTo {
+  align-self: stretch;
+  position: relative;
+}
+.letsMakeCooking {
+  font-weight: 600;
+}
+.signInTo {
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-label-colour);
+}
+.frame4,
+.titttle1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titttle1 {
+  align-self: stretch;
+  align-items: center;
+  gap: var(--gap-3xs);
+}
+.frame4 {
+  position: absolute;
+  top: calc(50% - 229.5px);
+  left: calc(50% - 162px);
+  width: 315px;
+  overflow: hidden;
+  align-items: flex-end;
+  text-align: left;
+  font-size: var(--text-style-large-text-bold-size);
+}
+.login {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+  height: 795px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--text-style-normal-text-bold-size);
+  color: var(--colour-styles-neutral-colour-black);
+  font-family: var(--text-style-smaller-text-small-label);
+}

@@ -1,0 +1,454 @@
+.createRecipeIngredientsChild {
+  position: absolute;
+  top: -43px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--colour-styles-secondary-colour-secondary-80);
+  filter: blur(417px);
+  width: 308px;
+  height: 106px;
+  display: none;
+}
+.imageChild {
+  position: absolute;
+  top: 0.7px;
+  left: -1px;
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 320px;
+  height: 117.9px;
+}
+.navBarMenu {
+  position: absolute;
+  height: 30.02%;
+  width: 15%;
+  top: 34.99%;
+  right: 42.5%;
+  bottom: 34.99%;
+  left: 42.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.addPicture {
+  position: absolute;
+  top: 85.2px;
+  left: 119px;
+  font-weight: 600;
+  display: inline-block;
+  width: 83px;
+  height: 15.6px;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 118.6px;
+}
+.description,
+.foodTitle {
+  position: absolute;
+  font-weight: 600;
+}
+.foodTitle {
+  top: 118.6px;
+  left: 5px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 194px;
+  height: 30.4px;
+}
+.description {
+  top: 149px;
+  left: 6px;
+}
+.card {
+  position: absolute;
+  top: 88px;
+  left: 30px;
+  width: 320px;
+  height: 170px;
+  font-size: var(--text-style-small-text-regular-size);
+  color: var(--colour-styles-neutral-colour-black);
+}
+.label {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+}
+.tabs,
+.tabs1 {
+  position: absolute;
+  top: 12px;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkred);
+  box-sizing: border-box;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.tabs {
+  left: 30px;
+  background-color: var(--colour-styles-neutral-colour-white);
+  padding: var(--padding-5xs) 0;
+  cursor: pointer;
+}
+.tabs1 {
+  left: 195px;
+  background-color: var(--color-darkred);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: var(--padding-5xs) var(--padding-4xs);
+  color: var(--colour-styles-neutral-colour-white);
+}
+.component3 {
+  position: absolute;
+  top: 366px;
+  left: -3px;
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 378px;
+  height: 59px;
+  overflow: hidden;
+  text-align: center;
+}
+.component4Icon {
+  position: absolute;
+  top: 769px;
+  left: 162px;
+  width: 50px;
+  height: 24px;
+  display: none;
+}
+.addTags {
+  position: absolute;
+  top: 308px;
+  left: 35px;
+  font-size: var(--text-style-small-text-regular-size);
+  font-weight: 600;
+  color: var(--colour-styles-neutral-colour-black);
+}
+.div {
+  position: relative;
+}
+.component5Child,
+.vuesaxlinearstarIcon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+.component5Child {
+  border-radius: var(--br-12xs-5);
+}
+.component5,
+.component6 {
+  position: absolute;
+  top: 329px;
+  left: 33px;
+  border-radius: var(--br-3xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  border: 1px solid var(--color-darkred);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  gap: var(--gap-8xs);
+}
+.component6 {
+  left: 125px;
+}
+.createRecipeIngredientsItem {
+  position: absolute;
+  top: 264px;
+  left: 33px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-300);
+  width: 316px;
+  height: 44px;
+}
+.writeHere {
+  top: 267px;
+  left: 48px;
+  color: var(--colour-styles-neutral-colour-black);
+}
+.bg,
+.tabs2,
+.writeHere {
+  position: absolute;
+}
+.tabs2 {
+  top: 645px;
+  left: 27px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  width: 320px;
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  color: var(--colour-styles-neutral-colour-white);
+}
+.bg {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 315px;
+  height: 93px;
+  opacity: 0.5;
+}
+.label3 {
+  top: 32px;
+  left: 15px;
+  display: inline-block;
+  width: 285px;
+}
+.label3,
+.label4,
+.step11 {
+  position: absolute;
+}
+.step11 {
+  top: 10px;
+  left: 15px;
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+}
+.label4 {
+  top: 62px;
+  left: 272px;
+  font-size: var(--text-style-small-text-regular-size);
+  text-align: right;
+}
+.image29Icon {
+  position: absolute;
+  top: 25px;
+  left: 269px;
+  width: 34px;
+  height: 37px;
+  object-fit: cover;
+}
+.label5 {
+  position: absolute;
+  top: 65px;
+  left: 15px;
+  display: inline-block;
+  width: 285px;
+}
+.step1 {
+  position: relative;
+  width: 315px;
+  height: 93px;
+}
+.bg1,
+.step1Wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.step1Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.bg1 {
+  border-radius: var(--br-xs);
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 315px;
+  height: 91px;
+  opacity: 0.5;
+}
+.addStep,
+.imageIcon {
+  position: absolute;
+  top: 14.4px;
+  left: 15px;
+  width: 52px;
+  height: 62.3px;
+}
+.addStep {
+  top: 32.3px;
+  left: 83px;
+  font-weight: 600;
+  display: inline-block;
+  width: 122px;
+  height: 28.7px;
+}
+.frameParent,
+.recipe12 {
+  position: absolute;
+  width: 315px;
+}
+.recipe12 {
+  top: 103px;
+  left: 0;
+  height: 91px;
+  font-size: var(--text-style-normal-text-bold-size);
+  color: var(--colour-styles-label-colour);
+}
+.frameParent {
+  top: 425px;
+  left: 27px;
+  height: 208px;
+  overflow-y: auto;
+  color: var(--colour-styles-neutral-colour-gray-3);
+}
+.image1,
+.saved {
+  position: absolute;
+  left: 0;
+}
+.image1 {
+  top: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-400);
+  width: 391px;
+  height: 81px;
+  opacity: 0.5;
+}
+.saved {
+  top: 32.4px;
+  display: inline-block;
+  width: 38px;
+  height: 16px;
+}
+.iconnavbookmarkinactive {
+  position: absolute;
+  height: 62.81%;
+  width: 80%;
+  top: 0;
+  right: 10.53%;
+  bottom: 37.19%;
+  left: 9.47%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  cursor: pointer;
+}
+.cart,
+.savedParent {
+  position: absolute;
+  top: 15px;
+  left: 128px;
+  width: 38px;
+  height: 48.4px;
+}
+.cart {
+  top: 30px;
+  left: 2px;
+  display: inline-block;
+  width: 28px;
+  height: 16px;
+}
+.iconCartAlt {
+  position: absolute;
+  height: 63.04%;
+  width: 96.67%;
+  top: -2.17%;
+  right: 6.67%;
+  bottom: 39.13%;
+  left: -3.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.cartParent,
+.groupChild {
+  position: absolute;
+  top: 17px;
+  left: 221px;
+  width: 30px;
+  height: 46px;
+}
+.groupChild {
+  height: 59.26%;
+  width: 12.28%;
+  top: 16.05%;
+  right: 10.74%;
+  bottom: 24.69%;
+  left: 76.98%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupItem,
+.imageParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 391px;
+  height: 81px;
+}
+.groupItem {
+  height: 59.26%;
+  width: 12.28%;
+  top: 16.05%;
+  right: 78.01%;
+  bottom: 24.69%;
+  left: 9.72%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupParent {
+  position: absolute;
+  top: 736px;
+  left: -10px;
+  width: 391px;
+  height: 81px;
+}
+.vuesaxlineararrowLeftIcon {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.title {
+  position: absolute;
+  top: -2px;
+  left: 115px;
+  font-weight: 600;
+  display: none;
+}
+.vuesaxlinearmoreIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.header {
+  position: absolute;
+  top: 54px;
+  left: 30px;
+  width: 317px;
+  height: 24px;
+  font-size: var(--text-style-medium-text-bold-size);
+  color: var(--colour-styles-label-colour);
+}
+.createRecipeIngredients {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+  height: 812px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--color-darkred);
+  font-family: var(--text-style-smaller-text-small-label);
+}

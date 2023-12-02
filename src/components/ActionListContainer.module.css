@@ -1,0 +1,76 @@
+.icon,
+.label {
+  position: absolute;
+  top: 10px;
+}
+.label {
+  width: calc(100% - 52px);
+  left: 44px;
+  display: inline-block;
+}
+.icon {
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.assetsactionItem {
+  align-self: stretch;
+  position: relative;
+  border-radius: var(--br-9xs);
+  height: 40px;
+}
+.label1 {
+  position: absolute;
+  top: 10px;
+  left: 44px;
+}
+.assetsactionItemChild {
+  position: absolute;
+  top: 11.1px;
+  left: 9.5px;
+  border-radius: var(--br-12xs-5);
+  width: 20px;
+  height: 20px;
+}
+.assetsactionItem1 {
+  align-self: stretch;
+  position: relative;
+  border-radius: var(--br-9xs);
+  height: 40px;
+  cursor: pointer;
+}
+.inputFieldvuesaxboldmessagIcon {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+}
+.iconnavbookmarkactive {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 63.5px);
+  width: 20px;
+  height: 20px;
+}
+.actionListContainer {
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  box-shadow: var(--depth-03);
+  width: 165px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--text-style-small-text-regular-size);
+  color: var(--colour-styles-label-colour);
+  font-family: var(--text-style-smaller-text-small-label);
+}

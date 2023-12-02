@@ -1,0 +1,267 @@
+.createRecipeIngredientsChild {
+  position: absolute;
+  top: -43px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--colour-styles-secondary-colour-secondary-80);
+  filter: blur(417px);
+  width: 308px;
+  height: 106px;
+  display: none;
+}
+.line {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: calc(50% - 67.5px);
+  border-radius: var(--br-81xl);
+  background-color: var(--colour-styles-label-colour);
+  width: 135px;
+  height: 5px;
+}
+.homeIndicator {
+  position: absolute;
+  top: 778px;
+  left: 0;
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 375px;
+  height: 34px;
+  overflow: hidden;
+}
+.component4Icon {
+  position: absolute;
+  top: 769px;
+  left: 162px;
+  width: 50px;
+  height: 24px;
+  display: none;
+}
+.add {
+  margin: 0;
+}
+.label {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+}
+.searchChild,
+.tabs {
+  position: absolute;
+  border-radius: var(--br-3xs);
+  box-sizing: border-box;
+}
+.tabs {
+  top: calc(50% + 163px);
+  left: calc(50% - 160.5px);
+  background-color: var(--color-darkred);
+  width: 320px;
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0;
+  cursor: pointer;
+  text-align: center;
+  color: var(--colour-styles-neutral-colour-white);
+}
+.searchChild {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--colour-styles-neutral-colour-white);
+  border: 1.3px solid var(--colour-styles-neutral-colour-gray-4);
+}
+.vuesaxoutlinesearchNormalIcon {
+  position: absolute;
+  height: 45%;
+  width: 7.06%;
+  top: 27.5%;
+  right: 89.01%;
+  bottom: 27.5%;
+  left: 3.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  display: none;
+}
+.placeholder {
+  position: absolute;
+  top: 28.75%;
+  left: 14.92%;
+}
+.search,
+.searchWrapper {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 126px);
+  width: 252px;
+  height: 40px;
+}
+.searchWrapper {
+  top: calc(50% - 186px);
+  left: calc(50% - 160.5px);
+}
+.searchIngredient {
+  position: absolute;
+  top: calc(50% - 210px);
+  left: calc(50% - 137.5px);
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+}
+.bg,
+.onion {
+  position: absolute;
+}
+.bg {
+  top: calc(50% - 38px);
+  left: calc(50% - 157.5px);
+  border-radius: var(--br-xs);
+  background-color: #efefef;
+  width: 315px;
+  height: 76px;
+  opacity: 0.5;
+}
+.onion {
+  top: calc(50% - 9px);
+  left: calc(50% - 85.5px);
+  font-weight: 600;
+}
+.imageIcon {
+  position: absolute;
+  top: calc(50% - 26px);
+  left: calc(50% - 153.5px);
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+}
+.amount,
+.recipe10 {
+  position: absolute;
+  left: calc(50% - 160.5px);
+  font-size: var(--text-style-normal-text-bold-size);
+  color: var(--colour-styles-label-colour);
+}
+.recipe10 {
+  top: calc(50% - 127px);
+  width: 315px;
+  height: 76px;
+}
+.amount {
+  top: calc(50% - 24px);
+  font-weight: 600;
+}
+.vuesaxoutlinesearchNormalIcon1 {
+  position: absolute;
+  height: 45.14%;
+  width: 7.08%;
+  top: 27.57%;
+  right: 89.03%;
+  bottom: 27.3%;
+  left: 3.89%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  display: none;
+}
+.placeholder1 {
+  position: absolute;
+  top: 25.95%;
+  left: 14.86%;
+  display: none;
+}
+.search1,
+.searchContainer {
+  position: absolute;
+  top: calc(50% - 18.5px);
+  left: calc(50% - 36px);
+  width: 72px;
+  height: 37px;
+}
+.searchContainer {
+  top: calc(50% + 9px);
+  left: calc(50% - 163.5px);
+}
+.searchInner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  border: 1.3px solid var(--color-darkred);
+  box-sizing: border-box;
+}
+.vuesaxoutlinesearchNormalIcon2 {
+  position: absolute;
+  height: 45.14%;
+  width: 7.07%;
+  top: 27.57%;
+  right: 88.97%;
+  bottom: 27.3%;
+  left: 3.97%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  display: none;
+}
+.placeholder2 {
+  top: 25.95%;
+  left: 14.83%;
+  display: none;
+}
+.g,
+.placeholder2,
+.search2 {
+  position: absolute;
+}
+.search2 {
+  top: calc(50% - 18.5px);
+  left: calc(50% - 29px);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 58px;
+  height: 37px;
+}
+.g {
+  top: calc(50% - 11.5px);
+  left: calc(50% - 13px);
+  font-weight: 500;
+  color: var(--colour-styles-neutral-colour-white);
+}
+.searchParent {
+  position: absolute;
+  top: calc(50% + 9px);
+  left: calc(50% - 74.5px);
+  width: 58px;
+  height: 37px;
+}
+.vectorIcon {
+  position: absolute;
+  height: 1.52%;
+  width: 2.78%;
+  top: 54.92%;
+  right: 56.61%;
+  bottom: 43.57%;
+  left: 40.6%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.createRecipeIngredients {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+  height: 488px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-neutral-colour-gray-4);
+  font-family: var(--text-style-smaller-text-small-label);
+}

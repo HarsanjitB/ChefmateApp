@@ -1,0 +1,346 @@
+.vuesaxlineararrowLeftIcon {
+  position: absolute;
+  top: 758px;
+  left: 324px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.gatherAllNeeded {
+  margin-bottom: 0;
+}
+.gatherAllNeededIngredients {
+  margin: 0;
+  padding-left: 19px;
+}
+.stepNotes {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  font-weight: 600;
+  display: inline-block;
+  width: 302px;
+  height: 101px;
+}
+.stepNotesSection {
+  position: absolute;
+  top: 624px;
+  left: 20px;
+  border-radius: var(--br-xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 336px;
+  height: 114px;
+  overflow-y: auto;
+  font-family: var(--font-inherit);
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 314px;
+  height: 83.1px;
+  opacity: 0.5;
+}
+.label,
+.tomatos {
+  position: absolute;
+  top: 27px;
+  left: 258px;
+  display: inline-block;
+  width: 35.9px;
+  height: 45.9px;
+}
+.tomatos {
+  top: 28.4px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 72.8px;
+  height: 52.5px;
+}
+.imageIcon {
+  position: absolute;
+  top: 13.1px;
+  left: 15px;
+  width: 51.8px;
+  height: 56.9px;
+  object-fit: cover;
+}
+.recipe1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.bg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 314px;
+  height: 82.1px;
+  opacity: 0.5;
+}
+.cabbage,
+.label1 {
+  position: absolute;
+  top: 30.2px;
+  left: 259.3px;
+  display: inline-block;
+  width: 35.9px;
+  height: 45.4px;
+}
+.cabbage {
+  top: 31.3px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 76.8px;
+  height: 51.8px;
+}
+.imageIcon1 {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  width: 51.8px;
+  height: 56.1px;
+  object-fit: cover;
+}
+.bgIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  width: 314px;
+  height: 81.2px;
+  opacity: 0.5;
+}
+.label2,
+.taco {
+  position: absolute;
+  top: 31.7px;
+  left: 258px;
+  display: inline-block;
+  width: 35.9px;
+  height: 44.9px;
+}
+.taco {
+  top: 31.4px;
+  left: 83px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 64px;
+  height: 51.7px;
+}
+.imageIcon2 {
+  position: absolute;
+  top: 12.8px;
+  left: 15px;
+  width: 51.8px;
+  height: 55.6px;
+  object-fit: cover;
+}
+.label3 {
+  top: 30.2px;
+  left: 263.2px;
+  width: 35.9px;
+  height: 45.4px;
+}
+.greenOnion,
+.label3,
+.sliceBread {
+  position: absolute;
+  display: inline-block;
+}
+.sliceBread {
+  top: 31.3px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 90.7px;
+  height: 51.8px;
+}
+.greenOnion {
+  width: 98.7px;
+}
+.greenOnion,
+.hotDog,
+.omelette {
+  top: 31.3px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  height: 51.8px;
+}
+.omelette {
+  position: absolute;
+  display: inline-block;
+  width: 75.8px;
+}
+.hotDog {
+  width: 64.8px;
+}
+.hotDog,
+.lettuce,
+.oninon {
+  position: absolute;
+  display: inline-block;
+}
+.oninon {
+  top: 31.3px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 58.8px;
+  height: 51.8px;
+}
+.lettuce {
+  width: 59.8px;
+}
+.lettuce,
+.redGreen,
+.spinach {
+  top: 31.3px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  height: 51.8px;
+}
+.spinach {
+  position: absolute;
+  display: inline-block;
+  width: 66.8px;
+}
+.redGreen {
+  width: 144.5px;
+}
+.burger,
+.fries,
+.label13,
+.redGreen {
+  position: absolute;
+  display: inline-block;
+}
+.fries {
+  top: 31.3px;
+  left: 82.7px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 37.9px;
+  height: 51.8px;
+}
+.burger,
+.label13 {
+  top: 30.2px;
+  left: 238.9px;
+  width: 32.6px;
+  height: 45.4px;
+}
+.burger {
+  top: 31.3px;
+  left: 75.1px;
+  font-size: var(--text-style-normal-text-bold-size);
+  font-weight: 600;
+  color: var(--colour-styles-label-colour);
+  text-align: left;
+  width: 49.8px;
+  height: 51.8px;
+}
+.imageIcon13 {
+  position: absolute;
+  top: 13px;
+  left: 13.6px;
+  width: 47px;
+  height: 56.1px;
+  object-fit: cover;
+}
+.recipe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 314px;
+  height: 1294px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.imageSection,
+.recipeWrapper {
+  position: absolute;
+  top: 13px;
+  left: 11px;
+  width: 314px;
+  height: 1268px;
+  overflow-y: auto;
+}
+.imageSection {
+  top: 173px;
+  left: 20px;
+  border-radius: var(--br-mini);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 337px;
+  height: 435px;
+  text-align: right;
+  font-size: var(--text-style-small-text-regular-size);
+  color: var(--colour-styles-neutral-colour-gray-3);
+}
+.stepOverview,
+.stepOverviewSection {
+  position: absolute;
+  width: 314px;
+  height: 114px;
+}
+.stepOverview {
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepOverviewSection {
+  top: 43px;
+  left: 33px;
+  text-align: center;
+  font-size: var(--font-size-15xl);
+}
+.headerIcon {
+  position: absolute;
+  top: 54px;
+  left: 30px;
+  width: 317px;
+  height: 24px;
+  cursor: pointer;
+}
+.ingredientTask {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-lightgreen);
+  width: 100%;
+  height: 812px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-inherit);
+  color: var(--colour-styles-label-colour);
+  font-family: var(--text-style-smaller-text-small-label);
+}

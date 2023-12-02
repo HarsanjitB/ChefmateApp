@@ -1,0 +1,247 @@
+.groupChild {
+  top: calc(50% - 26px);
+  left: calc(50% - 181.5px);
+  background-color: #3dd243;
+  width: 363px;
+}
+.groupChild,
+.groupItem,
+.rectangleParent {
+  position: absolute;
+  height: 52px;
+}
+.groupItem {
+  top: calc(50% - 26px);
+  left: calc(50% - 107.4px);
+  background-color: var(--color-limegreen-100);
+  width: 288.9px;
+}
+.rectangleParent {
+  top: calc(50% - 241px);
+  left: calc(50% - 189.5px);
+  width: 363px;
+  cursor: pointer;
+}
+.groupInner {
+  position: absolute;
+  top: calc(50% - 19.5px);
+  left: calc(50% - 20.5px);
+  width: 41px;
+  height: 39px;
+  object-fit: cover;
+}
+.shoppingCartItemMarkedAsInner {
+  position: absolute;
+  top: calc(50% - 233px);
+  left: calc(50% - 172.5px);
+  width: 41px;
+  height: 39px;
+}
+.shoppingCartItemMarkedAsChild,
+.shoppingCartItemMarkedAsItem {
+  position: absolute;
+  top: calc(50% - 186px);
+  left: calc(50% - 188.5px);
+  background-color: var(--color-darkred);
+  width: 377px;
+  height: 52px;
+}
+.shoppingCartItemMarkedAsItem {
+  top: calc(50% - 131px);
+}
+.ellipseDiv {
+  position: absolute;
+  top: -43px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--colour-styles-secondary-colour-secondary-80);
+  filter: blur(417px);
+  width: 308px;
+  height: 106px;
+  display: none;
+}
+.sliceDiv {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+.gCrushedTomatoes,
+.gSpaghettiNoodles {
+  position: absolute;
+  top: calc(50% - 175px);
+  left: calc(50% - 98.5px);
+  font-weight: 600;
+  display: inline-block;
+  width: 237px;
+  height: 40px;
+}
+.gSpaghettiNoodles {
+  top: calc(50% - 229px);
+}
+.gGroundBeef {
+  top: calc(50% - 118px);
+  left: calc(50% - 67.5px);
+  width: 237px;
+  height: 40px;
+}
+.addToYour,
+.gGroundBeef,
+.shreddedCheddar {
+  position: absolute;
+  font-weight: 600;
+  display: inline-block;
+}
+.shreddedCheddar {
+  top: 452px;
+  left: 118px;
+  width: 237px;
+  height: 40px;
+}
+.addToYour {
+  top: calc(50% + 160px);
+  left: calc(50% - 111.5px);
+  text-decoration: underline;
+  color: var(--color-darkred);
+  width: 249px;
+  height: 29px;
+  cursor: pointer;
+}
+.blankLine {
+  margin: 0;
+}
+.shoppingCart,
+.shoppingCart1 {
+  position: absolute;
+  font-weight: 600;
+}
+.shoppingCart {
+  top: 4px;
+  left: 58px;
+  display: none;
+}
+.shoppingCart1 {
+  top: calc(50% - 15.5px);
+  left: calc(50% - 105.5px);
+  display: inline-block;
+  width: 211px;
+  height: 31px;
+}
+.header {
+  top: 51px;
+  left: 83px;
+  width: 211px;
+  height: 31px;
+  color: var(--colour-styles-label-colour);
+}
+.header,
+.image,
+.saved {
+  position: absolute;
+}
+.image {
+  top: calc(50% - 40.5px);
+  left: calc(50% - 195.5px);
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-400);
+  width: 391px;
+  height: 81px;
+  opacity: 0.5;
+}
+.saved {
+  top: calc(50% + 8.2px);
+  left: calc(50% - 19px);
+  display: inline-block;
+  width: 38px;
+  height: 16px;
+}
+.iconnavbookmarkinactive {
+  position: absolute;
+  top: calc(50% - 24.2px);
+  left: calc(50% - 15.4px);
+  width: 30.4px;
+  height: 30.4px;
+  cursor: pointer;
+}
+.cart,
+.savedParent {
+  position: absolute;
+  top: calc(50% - 25.5px);
+  left: calc(50% - 67.5px);
+  width: 38px;
+  height: 48.4px;
+}
+.cart {
+  top: calc(50% + 7px);
+  left: calc(50% - 13px);
+  display: inline-block;
+  width: 28px;
+  height: 16px;
+}
+.iconCartAlt {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 16px);
+  width: 29px;
+  height: 29px;
+}
+.cartParent,
+.groupIcon {
+  position: absolute;
+  top: calc(50% - 23.5px);
+  left: calc(50% + 25.5px);
+  width: 30px;
+  height: 46px;
+}
+.groupIcon {
+  top: calc(50% - 27.5px);
+  left: calc(50% + 105.5px);
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.groupChild1,
+.imageParent {
+  position: absolute;
+  top: calc(50% - 40.5px);
+  left: calc(50% - 195.5px);
+  width: 391px;
+  height: 81px;
+}
+.groupChild1 {
+  top: calc(50% - 27.5px);
+  left: calc(50% - 157.5px);
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.groupParent {
+  position: absolute;
+  top: calc(50% + 328px);
+  left: calc(50% - 193.5px);
+  width: 391px;
+  height: 81px;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--color-darkred);
+}
+.gSeaSalt {
+  position: absolute;
+  top: 510px;
+  left: 125px;
+  font-weight: 600;
+  display: inline-block;
+  width: 237px;
+  height: 40px;
+}
+.shoppingCartItemMarkedAs {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--colour-styles-neutral-colour-white);
+  width: 100%;
+  height: 812px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-style-medium-text-bold-size);
+  color: var(--color-whitesmoke-100);
+  font-family: var(--text-style-smaller-text-small-label);
+}

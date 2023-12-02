@@ -1,0 +1,54 @@
+.frameChild,
+.label {
+  position: relative;
+}
+.frameChild {
+  border-radius: var(--br-12xs-5);
+  width: 20px;
+  height: 20px;
+}
+.starParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0;
+  gap: var(--gap-3xs);
+}
+.component5Container,
+.smallButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.smallButton {
+  border-radius: 6px;
+  background-color: var(--colour-styles-neutral-colour-gray-4);
+  width: 61px;
+  height: 20px;
+  flex-direction: row;
+  padding: var(--padding-3xs) var(--padding-11xl);
+  opacity: 0.7;
+  text-align: center;
+  font-size: var(--text-style-smaller-text-small-label-size);
+  color: var(--colour-styles-neutral-colour-white);
+}
+.component5Container {
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--colour-styles-neutral-colour-white);
+  box-shadow: var(--depth-03);
+  width: 171px;
+  height: 91px;
+  flex-direction: column;
+  padding: var(--padding-3xs) var(--padding-mini);
+  gap: var(--gap-8xs);
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--text-style-smaller-text-regular-size);
+  color: var(--colour-styles-label-colour);
+  font-family: var(--text-style-smaller-text-small-label);
+}
