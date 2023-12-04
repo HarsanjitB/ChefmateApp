@@ -59,6 +59,10 @@
   top: 0;
   left: 0;
 }
+.featurecontainer{
+  width: 89px;
+  height: 89px;
+}
 .search {
   border: 0;
   background-color: transparent;
@@ -472,7 +476,7 @@
   background-color: var(--colour-styles-neutral-colour-gray-4);
   width: 143px;
   height: 122px;
-  opacity: 0.5;
+  opacity: 1;
 }
 .image7 {
   left: 164px;

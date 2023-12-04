@@ -20,6 +20,9 @@ const Home1 = () => {
   const onIconNavBookmarkInactiveClick = useCallback(() => {
     navigate("/saved-recipe");
   }, [navigate]);
+  const onRecipeClick = useCallback(() => {
+    navigate("/recipeingredient1");
+  }, [navigate]);
 
   const onGroupIcon1Click = useCallback(() => {
     navigate("/my-recipes");
@@ -37,12 +40,7 @@ const Home1 = () => {
             <div className={styles.featuredRecipes}>
               Based on Your Preferences
             </div>
-            <div className={styles.dontLikeWhatContainer}>
-              {`Don’t like what you see? `}
-              <span className={styles.updateYourProfile}>
-                Update your profile
-              </span>
-            </div>
+            
           </div>
         </div>
         <div className={styles.frame2}>
@@ -133,14 +131,20 @@ const Home1 = () => {
         <div className={styles.frame10}>
           <div className={styles.frame11}>
             <div className={styles.frame12}>
-              <div className={styles.image4} />
+              <div  />
+              <div >
+              <img alt="" src="/image 22.png" onClick={onRecipeClick}/>
+            </div>
               <div className={styles.rating}>
                 <img className={styles.starIcon} alt="" src="/star2.svg" />
                 <div className={styles.div}>4.5</div>
               </div>
             </div>
             <div className={styles.frame13}>
-              <div className={styles.image4} />
+              <div />
+              <div >
+              <img alt="" src="/image 22.png" onClick={onRecipeClick}/>
+            </div>
               <div className={styles.rating1}>
                 <img className={styles.starIcon} alt="" src="/star2.svg" />
                 <div className={styles.div}>5.0</div>
@@ -155,13 +159,17 @@ const Home1 = () => {
                 15-minute meals that are quick and easy to make
               </div>
               <div className={styles.quickBites}>Quick Bites</div>
-              <div className={styles.readyToCook}>
+              {/* <div className={styles.readyToCook}>
                 Ready to cook something delicious again?
               </div>
-              <div className={styles.recentRecipes}>Recent Recipes</div>
+              <div className={styles.recentRecipes}>Recent Recipes</div> */}
             </div>
-            <div className={styles.image6} />
-            <div className={styles.image7} />
+            <div className={styles.image6} >      
+              <img alt="" src="/image 22.png" onClick={onRecipeClick}/>
+            </div>
+            <div className={styles.image7} >
+              <img alt="" src="/image 22.png" onClick={onRecipeClick}/>
+            </div>
             <div className={styles.rating2}>
               <img className={styles.starIcon} alt="" src="/star2.svg" />
               <div className={styles.div}>3.9</div>
@@ -170,30 +178,6 @@ const Home1 = () => {
               <img className={styles.starIcon} alt="" src="/star2.svg" />
               <div className={styles.div}>4.4</div>
             </div>
-          </div>
-        </div>
-        <div className={styles.frame16}>
-          <div className={styles.frame17}>
-            <div className={styles.image8} />
-            <div className={styles.image9} />
-            <div className={styles.image10} />
-          </div>
-        </div>
-        <div className={styles.category}>
-          <div className={styles.category1}>
-            <div className={styles.all}>
-              <div className={styles.featuredRecipes}>All</div>
-              <div className={styles.allChild} />
-            </div>
-            <div className={styles.div}>Indian</div>
-            <div className={styles.div}>Italian</div>
-            <div className={styles.div}>Asian</div>
-            <div className={styles.div}>Chinese</div>
-            <div className={styles.div}>Local Dish</div>
-            <div className={styles.div}>vegetables</div>
-            <div className={styles.div}>Cereal</div>
-            <div className={styles.div}>Fruit</div>
-            <div className={styles.div}>Protein</div>
           </div>
         </div>
       </div>
