@@ -1,11 +1,11 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./SavedRecipe.module.css";
-
+import { savedRecipesList } from "../Lists";
 const SavedRecipe = () => {
   const navigate = useNavigate();
 
-  const onCardsContainerClick = useCallback(() => {
+  const onCardsContainerClick = useCallback((id) => {
     navigate("/recipeingredient1");
   }, [navigate]);
 
@@ -25,8 +25,37 @@ const SavedRecipe = () => {
     <div className={styles.savedRecipe}>
       <div className={styles.savedRecipeChild} />
       <div className={styles.cards}>
-        <div className={styles.cards1} onClick={onCardsContainerClick}>
-          <div className={styles.card}>
+        {/* <div className={styles.cards1} onClick={onCardsContainerClick}> */}
+          <ul className={styles.cards1} >
+            {savedRecipesList.map((item,index) =>(
+              <li id = {index} onClick={() => onCardsContainerClick(index)}>
+                <div >
+                <div className={styles.card}>
+                  <img className={styles.cardChild} alt="" src={item.imgPath} />
+                  <div className={styles.cardItem} />
+                  <img className={styles.bookmarkIcon} alt="" src="/bookmark2.svg" />
+                  <div className={styles.rating}>
+                    <img className={styles.starIcon} alt="" src="/star.svg" />
+                    <div className={styles.div}>4.0</div>
+                  </div>
+                  <div className={styles.foodTitle}>
+                    {item.name}
+                  </div>
+                  <div className={styles.time}>
+                    <img
+                      className={styles.vuesaxoutlinetimerIcon}
+                      alt=""
+                      src="/vuesaxoutlinetimer1.svg"
+                    />
+                    <div className={styles.div}>{item.time}</div>
+                  </div>
+                </div>
+                </div>
+                
+              </li>
+            ))}
+          </ul>
+          {/* <div className={styles.card}>
             <img className={styles.cardChild} alt="" src="/image40@2x.png" />
             <div className={styles.cardItem} />
             <img className={styles.bookmarkIcon} alt="" src="/bookmark2.svg" />
@@ -121,8 +150,8 @@ const SavedRecipe = () => {
             </div>
             <div className={styles.creator}>By Spicy Nelly</div>
             <img className={styles.bookmarkIcon2} alt="" src="/bookmark2.svg" />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
       <div className={styles.component3}>
         <div className={styles.tabs}>
