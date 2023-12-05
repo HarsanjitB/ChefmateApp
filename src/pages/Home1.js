@@ -4,7 +4,7 @@ import FrameComponent from "../components/FrameComponent2";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home1.module.css";
-
+import { setCurrentRecipe } from "../Lists";
 const Home1 = () => {
   const [isFramePopupOpen, setFramePopupOpen] = useState(false);
   const navigate = useNavigate();
@@ -21,6 +21,33 @@ const Home1 = () => {
     navigate("/saved-recipe");
   }, [navigate]);
   const onRecipeClick = useCallback(() => {
+    setCurrentRecipe({
+      name: "Rigatoni Bolenese with Parmesan",
+      imgPath: "/image 22.png",
+      time: "20 min",
+      rating: "5",
+      ingredients: [
+        {name: "Tomatoes",
+        amount: "2"}
+        ,{name: "Cabbage",
+        amount: "1/2"}
+        ,{name: "Cheese ",
+        amount: "2 Slices"}
+        ,{name: "Beef",
+        amount: "200 g"}
+        ,{name: "Penne Pasta",
+        amount: "100 g"}
+      ]
+      , steps: [
+        {
+          stepName: "First Thing"
+          , stepDescription: "Make food do this first"
+          ,stepTime: "5 min"
+          , stepImgPath: ""
+          ,ingList: ["Tomatoes"]
+        }
+      ]
+    });
     navigate("/recipeingredient1");
   }, [navigate]);
 
