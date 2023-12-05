@@ -18,7 +18,7 @@ const RecipeSaved = () => {
   }, [navigate]);
 
   const onSmallButtonContainerClick = useCallback(() => {
-    navigate("/results-from-search");
+    navigate("/saved-recipe");
   }, [navigate]);
 
   const onVuesaxlineararrowLeftIconClick = useCallback(() => {

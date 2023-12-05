@@ -54,6 +54,9 @@ export var savedRecipesList = [
         ]
       }
   ]
+  export var appendSavedRecipes = function(recipe) {
+    savedRecipesList.push(recipe)
+};
   export var currentRecipe = {
     name: "Chicken Pasta With Tomato and Spinach",
     imgPath: "/image40@2x.png",

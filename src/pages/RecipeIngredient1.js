@@ -1,11 +1,12 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./RecipeIngredient1.module.css";
-import { currentRecipe } from "../Lists";
+import { appendSavedRecipes, currentRecipe } from "../Lists";
 const RecipeIngredient1 = () => {
   const navigate = useNavigate();
 
   const onBookmarkIconClick = useCallback(() => {
+    appendSavedRecipes(currentRecipe);
     navigate("/recipe-saved");
   }, [navigate]);
 

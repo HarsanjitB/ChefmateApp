@@ -2,9 +2,13 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./RecipeIngredient2.module.css";
 import { currentRecipe } from "../Lists";
+import { appendSavedRecipes } from "../Lists";
 const RecipeIngredient2 = () => {
   const navigate = useNavigate();
-  
+  const onBookmarkIconClick = useCallback(() => {
+    appendSavedRecipes(currentRecipe);
+    navigate("/recipe-saved");
+  }, [navigate]);
   const onTabsContainer1Click = useCallback(() => {
     navigate("/recipeingredient2");
   }, [navigate]);
@@ -39,7 +43,7 @@ const RecipeIngredient2 = () => {
           <img className={styles.starIcon} alt="" src="/star.svg" />
           <div className={styles.div}>{currentRecipe.rating}</div>
         </div>
-        <img className={styles.bookmarkIcon} alt="" src="/bookmark3.svg" />
+        <img className={styles.bookmarkIcon} alt="" src="/bookmark.svg" onClick={onBookmarkIconClick}/>
         <div className={styles.time}>
           <img
             className={styles.vuesaxoutlinetimerIcon}
