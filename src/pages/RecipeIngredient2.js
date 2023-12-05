@@ -179,12 +179,6 @@ const RecipeIngredient2 = () => {
             </div> */}
           </div>
         </div>
-        <div className={styles.recipe16}>
-          <div className={styles.bg14} />
-        </div>
-        <div className={styles.recipe17}>
-          <div className={styles.bg15} />
-        </div>
       </div>
       <img className={styles.component4Icon} alt="" src="/component-4.svg" />
       <div className={styles.groupParent}>

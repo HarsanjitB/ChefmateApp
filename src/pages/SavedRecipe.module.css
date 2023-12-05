@@ -192,8 +192,9 @@ ul {
 }
 .cards1 {
   top: 0;
-  left: 5px;
+  left: 0px;
   display: flex;
+  overflow-y: scroll;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
@@ -202,11 +203,15 @@ ul {
 }
 .cards {
   top: calc(50% - 315px);
-  left: calc(50% - 169.5px);
+  left: calc(50% - 160.5px);
   width: 315px;
   height: 642px;
-  overflow-y: auto;
+  overflow: clip;
   font-size: var(--text-style-smaller-text-small-label-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .label {
   flex: 1;
@@ -248,13 +253,6 @@ ul {
   color: var(--colour-styles-neutral-colour-white);
 }
 .tabs2,
-.tabs3 {
-  position: absolute;
-  border-radius: var(--br-3xs);
-  height: 6px;
-  transform: rotate(90deg);
-  transform-origin: 0 0;
-}
 .tabs2 {
   top: calc(50% - 315px);
   left: calc(50% + 166.5px);
@@ -370,7 +368,8 @@ ul {
 }
 .title {
   top: calc(50% - 13.5px);
-  left: calc(50% - 64.5px);
+  left: calc(50% - 74.5px);
+  width: 200px;
   font-weight: 600;
 }
 .header {

@@ -291,7 +291,6 @@
   left: 11px;
   width: 314px;
   height: 1268px;
-  overflow-y: auto;
 }
 .imageSection {
   top: 173px;
@@ -301,6 +300,7 @@
   width: 337px;
   height: 435px;
   text-align: right;
+  overflow: auto;
   font-size: var(--text-style-small-text-regular-size);
   color: var(--colour-styles-neutral-colour-gray-3);
 }

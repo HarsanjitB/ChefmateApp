@@ -239,10 +239,6 @@ const RecipeIngredient1 = () => {
           <img className={styles.image29Icon} alt="" src="/image-29@2x.png" />
         </div>
       </div>
-      <div className={styles.recipe18}>
-        <div className={styles.bg10} />
-      </div>
-      <div className={styles.bg11} />
       <div className={styles.groupContainer}>
         <div className={styles.buttonFilterWrapper}>
           <div className={styles.buttonFilterWrapper}>

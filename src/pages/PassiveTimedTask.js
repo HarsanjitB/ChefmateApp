@@ -77,7 +77,7 @@ const PassiveTimedTask = () => {
               </div>
             </div>
             <div className={styles.neededForThisContainer}>
-              <p className={styles.neededForThis}>Needed for this step: </p>
+              <p className={styles.neededForThis}>Needed for this step:</p>
             </div>
           </div>
           <div className={styles.stepOverviewSection}>

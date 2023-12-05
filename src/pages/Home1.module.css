@@ -65,7 +65,10 @@
 }
 .search {
   border: 0;
+  width: 82%;
+  height: 100%;
   background-color: transparent;
+  
 }
 .buttonFilterIcon {
   border-radius: var(--br-3xs);
@@ -102,12 +105,10 @@
 }
 .frame2 {
   top: calc(50% - 299.5px);
-  left: calc(50% - 188.5px);
+  left: calc(50% - 160.5px);
   width: 339px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  height: 50px;
+  overflow: visible;
   justify-content: center;
 }
 .saved {
@@ -207,7 +208,6 @@
 .letsStartCooking {
   top: 0;
   font-weight: 600;
-  width: 193.4px;
 }
 .welcomeBackUsers {
   top: 31px;

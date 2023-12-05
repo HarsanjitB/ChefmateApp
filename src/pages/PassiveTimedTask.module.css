@@ -110,6 +110,7 @@
   width: 314px;
   height: 1337px;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -122,12 +123,12 @@
   left: 15px;
   width: 305px;
   height: 93px;
-  overflow-y: auto;
 }
 .ingredientSection1 {
   top: 20.4px;
   left: 0;
   border-radius: var(--br-mini);
+  overflow: scroll;
   background-color: var(--colour-styles-neutral-colour-white);
   width: 335px;
   height: 103.1px;
@@ -289,7 +290,7 @@
   left: 0;
   border-radius: var(--br-lgi);
   background-color: var(--color-gray-200);
-  width: 275px;
+  width: 100%;
   height: 83px;
   overflow-x: auto;
 }
@@ -307,11 +308,11 @@
 .addTimer {
   position: absolute;
   top: 11.1px;
-  left: 286px;
+  left: 273px;
   border-radius: var(--br-lgi);
   background-color: var(--color-gray-200);
   width: 56px;
-  height: 62px;
+  height: 58px;
   overflow: hidden;
   font-size: var(--font-size-17xl);
 }

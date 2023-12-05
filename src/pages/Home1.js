@@ -76,7 +76,12 @@ const Home1 = () => {
               className={styles.search}
               color="error"
               label="Search recipe"
-              sx={{ width: 252 }}
+              sx={{ 
+                width: 252,
+                '& .MuiInputBase-input': { // targeting the input element
+                  padding: '12px', // adjust as needed
+                }
+              }}
               variant="outlined"
             />
             <button className={styles.frame3} onClick={openFramePopup}>

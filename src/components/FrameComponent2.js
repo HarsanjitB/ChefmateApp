@@ -384,11 +384,6 @@ const FrameComponent = ({ onClose }) => {
             />
           </div>
         </div>
-        <img
-          className={styles.vuesaxoutlinesetting4Icon}
-          alt=""
-          src="/vuesaxoutlinesetting41.svg"
-        />
       </div>
       <img className={styles.frameChild} alt="" src="/vuesaxlinearstar2.svg" />
     </div>
