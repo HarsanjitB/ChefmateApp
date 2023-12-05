@@ -10,7 +10,7 @@ const ActiveTimedTaskGreyedOut1 = () => {
   const navigate = useNavigate();
 
   const onVuesaxlineararrowLeftIconClick = useCallback(() => {
-    navigate("/active-timed-task");
+    navigate(-1);
   }, [navigate]);
 
   const onVuesaxlineararrowLeftIcon1Click = useCallback(() => {

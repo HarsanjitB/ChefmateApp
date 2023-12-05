@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "./ShoppingCart.module.css";
 import React, { useState, useRef } from 'react';
 import {
@@ -35,6 +36,7 @@ const ShoppingCart = () => {
   const navigate = useNavigate();
   const [showText, setShowText] = useState(true);
   const [inputValue, setInputValue] = useState('');
+  const location = useLocation();
   const [items, setList] = useState([
     { text: '600g crushed tomatoes', clicked: false },
     { text: '400g ground beef', clicked: false },
@@ -74,6 +76,10 @@ const ShoppingCart = () => {
 
   const onIconNavBookmarkInactiveClick = useCallback(() => {
     navigate("/saved-recipe");
+  }, [navigate]);
+
+  const onHomeClick = useCallback(() => {
+    navigate("/home");
   }, [navigate]);
 
   const onGroupIcon1Click = useCallback(() => {
@@ -163,10 +169,10 @@ const ShoppingCart = () => {
             <img
               className={styles.iconCartAlt}
               alt=""
-              src="/-icon-cart-alt.svg"
+              src={location.pathname === "/shopping-cart" ? "/-icon-cart-alt-grey.svg" : "/-icon-cart-alt-grey.svg"}
             />
           </div>
-          <img className={styles.groupItem} alt="" src="/group-87.svg" />
+          <img className={styles.groupItem} alt="" src="/group-87.svg" onClick={onHomeClick}/>
         </div>
         <img
           className={styles.groupInner}

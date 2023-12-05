@@ -22,7 +22,7 @@ const RecipeSaved = () => {
   }, [navigate]);
 
   const onVuesaxlineararrowLeftIconClick = useCallback(() => {
-    navigate("/saved-recipe");
+    navigate(-1);
   }, [navigate]);
 
   return (

@@ -10,7 +10,7 @@ const IngredientTask = () => {
   }, [navigate]);
 
   const onHeaderClick = useCallback(() => {
-    navigate("/recipeingredient");
+    navigate("/recipeingredient1");
   }, [navigate]);
 
   return (

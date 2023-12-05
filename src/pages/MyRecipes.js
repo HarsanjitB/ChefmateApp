@@ -17,6 +17,10 @@ const MyRecipes = () => {
     navigate("/recipeingredient1");
   }, [navigate]);
 
+  const onHomeClick = useCallback(() => {
+    navigate("/home");
+  }, [navigate]);
+
   const onGroupIconClick = useCallback(() => {
     navigate("/create-recipe-ingredients");
   }, [navigate]);
@@ -157,7 +161,7 @@ const MyRecipes = () => {
               src="/-icon-cart-alt.svg"
             />
           </div>
-          <img className={styles.groupChild} alt="" src="/group-87.svg" />
+          <img className={styles.groupChild} alt="" src="/group-87.svg" onClick={onHomeClick} />
         </div>
         <img className={styles.groupItem} alt="" src="/group-95.svg" />
       </div>

@@ -14,7 +14,7 @@ const UntimedTask = () => {
   }, [navigate]);
 
   const onVuesaxlineararrowLeftIcon1Click = useCallback(() => {
-    navigate("/saved-recipe");
+    navigate("/ingredient-task");
   }, [navigate]);
 
   const openActionListContainer = useCallback(() => {

@@ -7,6 +7,10 @@ import { setCurrentRecipe } from "../Lists";
 const SavedRecipe = () => {
   const navigate = useNavigate();
 
+  const onCreateRecipesClick = useCallback(() => {
+    navigate("/my-recipes");
+  }, [navigate]);
+
   const onCardsContainerClick = useCallback((id) => {
     setCurrentRecipe(savedRecipesList[id])
     navigate("/recipeingredient1");
@@ -58,7 +62,58 @@ const SavedRecipe = () => {
               </li>
             ))}
           </ul>
-          {/* <div className={styles.card}>
+          
+      </div>
+      <div className={styles.component3}>
+        <div className={styles.tabs}>
+          <div className={styles.label}>Recipe</div>
+        </div>
+        <div className={styles.tabs1}>
+          <div className={styles.label}>dfd</div>
+        </div>
+      </div>
+      <div className={styles.tabs2} />
+      <div className={styles.tabs3} />
+      <img className={styles.groupIcon} alt="" src="/group1.svg" />
+      <div className={styles.groupParent}>
+        <div className={styles.imageParent}>
+          <div className={styles.image} />
+          <div className={styles.savedParent}>
+            <div className={styles.saved}>Saved</div>
+            <img
+              className={styles.iconnavbookmarkinactive}
+              alt=""
+              src="/iconnavbookmarkinactive4.svg"
+              onClick={onIconNavBookmarkInactiveClick}
+            />
+          </div>
+          <div className={styles.cartParent} onClick={onGroupContainer1Click}>
+            <div className={styles.cart}>Cart</div>
+            <img
+              className={styles.iconCartAlt}
+              alt=""
+              src="/-icon-cart-alt.svg"
+            />
+          </div>
+          <img
+            className={styles.groupChild}
+            alt=""
+            src="/group-87.svg"
+            onClick={onGroupIcon1Click}
+          />
+        </div>
+        <img className={styles.groupItem} onClick={onCreateRecipesClick} alt="" src="/group-951.svg" />
+      </div>
+      <div className={styles.header}>
+        <div className={styles.title}>Saved recipes</div>
+      </div>
+    </div>
+  );
+};
+
+export default SavedRecipe;
+
+/* {/* <div className={styles.card}>
             <img className={styles.cardChild} alt="" src="/image40@2x.png" />
             <div className={styles.cardItem} />
             <img className={styles.bookmarkIcon} alt="" src="/bookmark2.svg" />
@@ -153,54 +208,5 @@ const SavedRecipe = () => {
             </div>
             <div className={styles.creator}>By Spicy Nelly</div>
             <img className={styles.bookmarkIcon2} alt="" src="/bookmark2.svg" />
-          </div> */}
-        {/* </div> */}
-      </div>
-      <div className={styles.component3}>
-        <div className={styles.tabs}>
-          <div className={styles.label}>Recipe</div>
-        </div>
-        <div className={styles.tabs1}>
-          <div className={styles.label}>dfd</div>
-        </div>
-      </div>
-      <div className={styles.tabs2} />
-      <div className={styles.tabs3} />
-      <img className={styles.groupIcon} alt="" src="/group1.svg" />
-      <div className={styles.groupParent}>
-        <div className={styles.imageParent}>
-          <div className={styles.image} />
-          <div className={styles.savedParent}>
-            <div className={styles.saved}>Saved</div>
-            <img
-              className={styles.iconnavbookmarkinactive}
-              alt=""
-              src="/iconnavbookmarkinactive4.svg"
-              onClick={onIconNavBookmarkInactiveClick}
-            />
-          </div>
-          <div className={styles.cartParent} onClick={onGroupContainer1Click}>
-            <div className={styles.cart}>Cart</div>
-            <img
-              className={styles.iconCartAlt}
-              alt=""
-              src="/-icon-cart-alt.svg"
-            />
-          </div>
-          <img
-            className={styles.groupChild}
-            alt=""
-            src="/group-87.svg"
-            onClick={onGroupIcon1Click}
-          />
-        </div>
-        <img className={styles.groupItem} alt="" src="/group-951.svg" />
-      </div>
-      <div className={styles.header}>
-        <div className={styles.title}>Saved recipes</div>
-      </div>
-    </div>
-  );
-};
-
-export default SavedRecipe;
+          </div> }
+        {/* </div> } */

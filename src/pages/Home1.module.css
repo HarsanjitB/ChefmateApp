@@ -9,6 +9,13 @@
   height: 106px;
   display: none;
 }
+.searchResultsContainer {
+  position: absolute;
+  top: calc(50% - 248.5px);
+  left: calc(50% - 161.5px);
+  transform: translate(-50%, -50%); /* centers the container */
+  /* add other styles as needed */
+}
 .featuredRecipes {
   position: relative;
   font-weight: 600;
