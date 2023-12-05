@@ -1,10 +1,10 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./RecipeIngredient2.module.css";
-
+import { currentRecipe } from "../Lists";
 const RecipeIngredient2 = () => {
   const navigate = useNavigate();
-
+  
   const onTabsContainer1Click = useCallback(() => {
     navigate("/recipeingredient2");
   }, [navigate]);
@@ -33,11 +33,11 @@ const RecipeIngredient2 = () => {
     <div className={styles.recipeingredient}>
       <div className={styles.recipeingredientChild} />
       <div className={styles.card}>
-        <img className={styles.imageIcon} alt="" src="/image40@2x.png" />
+        <img className={styles.imageIcon} alt="" src={currentRecipe.imgPath} />
         <div className={styles.cardChild} />
         <div className={styles.rating}>
           <img className={styles.starIcon} alt="" src="/star.svg" />
-          <div className={styles.div}>5.0</div>
+          <div className={styles.div}>{currentRecipe.rating}</div>
         </div>
         <img className={styles.bookmarkIcon} alt="" src="/bookmark3.svg" />
         <div className={styles.time}>
@@ -46,11 +46,8 @@ const RecipeIngredient2 = () => {
             alt=""
             src="/vuesaxoutlinetimer1.svg"
           />
-          <div className={styles.div}>20 min</div>
+          <div className={styles.div}>{currentRecipe.time}</div>
         </div>
-      </div>
-      <div className={styles.time1}>
-        <div className={styles.items}>0 Items</div>
       </div>
       <div className={styles.component3}>
         <div className={styles.tabs}>
@@ -64,9 +61,23 @@ const RecipeIngredient2 = () => {
         <div className={styles.label}>Start Interactive Cooking</div>
       </div>
       <div className={styles.frameParent}>
-        <div className={styles.recipeWrapper}>
-          <div className={styles.recipe}>
-            <div className={styles.recipe1}>
+        <div >
+          <div className={styles.recipeWrapper}>
+              <ul className={styles.recipe} >
+                {currentRecipe.ingredients.map((item,index) =>(
+                  <li id = {index} >
+
+                    <div className={styles.recipe1}>
+                      <div className={styles.bg} />
+                      <div className={styles.label5}>{item.amount}</div>
+                      <div className={styles.tomatos}>{item.name}</div>
+                      <img className={styles.imageIcon1} alt="" src="/image7@2x.png" />
+                      <img className={styles.imageIcon2} alt="" src="/image41.svg" />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            {/* <div className={styles.recipe1}>
               <div className={styles.bg} />
               <div className={styles.label3}>2</div>
               <div className={styles.tomatos}>Tomatos</div>
@@ -161,7 +172,7 @@ const RecipeIngredient2 = () => {
               <div className={styles.label9}>300g</div>
               <div className={styles.greenOnion}>Burger</div>
               <img className={styles.imageIcon1} alt="" src="/image17@2x.png" />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.recipe16}>
@@ -203,22 +214,7 @@ const RecipeIngredient2 = () => {
       </div>
       <div className={styles.foodTitleParent}>
         <div className={styles.foodTitle}>
-          Chicken Pasta with Tomato and Spinach
-        </div>
-        <div className={styles.creatorsProfile} />
-        <div className={styles.label19}>Posted By</div>
-        <div className={styles.rating1}>
-          <div className={styles.div}>Featured</div>
-        </div>
-        <div className={styles.creatorParent}>
-          <div className={styles.creator}>
-            <div className={styles.info}>
-              <div className={styles.label20}>BadKarma23</div>
-            </div>
-          </div>
-          <img className={styles.starIcon1} alt="" src="/star.svg" />
-          <img className={styles.starIcon2} alt="" src="/star.svg" />
-          <img className={styles.starIcon3} alt="" src="/star.svg" />
+          {currentRecipe.name}
         </div>
       </div>
       <div className={styles.groupContainer}>

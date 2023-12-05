@@ -2,10 +2,13 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./SavedRecipe.module.css";
 import { savedRecipesList } from "../Lists";
+import { currentRecipe } from "../Lists";
+import { setCurrentRecipe } from "../Lists";
 const SavedRecipe = () => {
   const navigate = useNavigate();
 
   const onCardsContainerClick = useCallback((id) => {
+    setCurrentRecipe(savedRecipesList[id])
     navigate("/recipeingredient1");
   }, [navigate]);
 

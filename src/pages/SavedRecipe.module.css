@@ -9,6 +9,10 @@
   height: 106px;
   display: none;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
 .cardChild,
 .cardItem {
   position: absolute;
