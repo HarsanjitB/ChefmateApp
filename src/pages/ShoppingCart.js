@@ -1,9 +1,72 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ShoppingCart.module.css";
+import React, { useState, useRef } from 'react';
+import {
+  LeadingActions,
+  SwipeableList,
+  SwipeableListItem,
+  SwipeAction,
+  TrailingActions,
+} from 'react-swipeable-list';
+import 'react-swipeable-list/dist/styles.css';
+
+
+
+
+const leadingActions = () => (
+  <LeadingActions>
+    <SwipeAction onClick={() => console.info('Leading action triggered')}>
+    <div style={{ backgroundColor: 'blue', width: '100%', height: '37px' }}>
+    <img src="https://www.iconpacks.net/icons/1/free-trash-icon-347-thumb.png" width="45" height="35"/>
+
+      </div>
+    </SwipeAction>
+    
+
+  </LeadingActions>
+);
+
+
+
+
 
 const ShoppingCart = () => {
   const navigate = useNavigate();
+  const [showText, setShowText] = useState(true);
+  const [inputValue, setInputValue] = useState('');
+  const [items, setList] = useState([
+    { text: '600g crushed tomatoes', clicked: false },
+    { text: '400g ground beef', clicked: false },
+    { text: '6 eggs', clicked: false },
+    { text: '8 taco shells', clicked: false },
+    { text: 'shredded cheddar', clicked: false },
+    { text: '400g sea salt', clicked: false },
+  ]);
+  
+
+  const inputRef = useRef();
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleAddToList = () => {
+    if (inputValue.trim() !== '') {
+      const newItem = {text: inputValue, clicked: false}
+      setList([...items, newItem]); 
+      setInputValue('');
+    }
+    setShowText(!showText);
+  };
+
+
+  const getInputValue = () => {
+    const enteredValue = inputRef.current.value;
+    console.log(enteredValue);
+    items.push(enteredValue);
+   
+  };
 
   const onGroupContainerClick = useCallback(() => {
     navigate("/shopping-cart-item-marked-as-completed");
@@ -18,29 +81,71 @@ const ShoppingCart = () => {
   }, [navigate]);
 
   const onAddToYourClick = useCallback(() => {
-    navigate("/shopping-cart-after-add-to-your-shopping-list-pressed");
-  }, [navigate]);
+    setShowText(!showText);
+    
+  });
 
+  const handleDeleteItem = (indexToDelete) => {
+    const updatedItems = [...items];
+
+    updatedItems.splice(indexToDelete, 1);
+    setList(updatedItems);
+  };
+
+  const handleItemClick = (index) => {
+    const updatedItems = [...items];
+    updatedItems[index].clicked = !updatedItems[index].clicked;
+    setList(updatedItems);
+  };
+  
   return (
-    <div className={styles.shoppingCart}>
-      <div className={styles.shoppingCartInner} onClick={onGroupContainerClick}>
-        <div className={styles.groupChild} />
+    <div  className={styles.shoppingCart}>
+      <div  onClick={onGroupContainerClick}>
+        <div />
       </div>
-      <div className={styles.shoppingCartChild} />
-      <div className={styles.shoppingCartItem} />
-      <div className={styles.rectangleDiv} />
-      <div className={styles.shoppingCartChild1} />
-      <div className={styles.shoppingCartChild2} />
-      <div className={styles.ellipseDiv} />
-      <div className={styles.sliceDiv} />
-      <div className={styles.gCrushedTomatoes}>600g crushed tomatoes</div>
-      <div className={styles.gGroundBeef}>400g ground beef</div>
-      <div className={styles.eggs}>6 eggs</div>
-      <div className={styles.tacoShells}>8 taco shells</div>
-      <div className={styles.shreddedCheddar}>shredded cheddar</div>
-      <div className={styles.lineDiv} />
-      <div className={styles.gSeaSalt}>400g sea salt</div>
-      <div className={styles.add}>Add</div>
+      
+  <div>
+    
+       <p className={styles.addToYour2} style={{ color: 'black' }} >Michael’s Shopping List</p>
+  </div>
+  <div className={styles.space}>
+   
+    </div>
+
+    <SwipeableList>
+
+      {items.map((item, index) => (
+        <SwipeableListItem
+        key={index}
+        leadingActions={leadingActions()}
+        onSwipeProgress={(progress) => {
+          console.log(progress);
+          if (progress === 100) {
+            progress = 0;
+            handleDeleteItem(index);
+            progress = 0;
+          }
+        }}
+      >
+        <div key={index} className={styles.itemContainer}>
+          <div
+            className={`${styles.item} ${
+              items[index].clicked ? styles.itemClicked : ''
+            }`}
+            onClick={() => handleItemClick(index)}
+          >
+            {item.text}
+          </div>
+          <div className={styles.horizontalBar}></div>
+        </div>
+      </SwipeableListItem>
+        
+      ))}
+         </SwipeableList>
+
+
+    
+     
       <div className={styles.groupParent}>
         <div className={styles.imageParent}>
           <div className={styles.image} />
@@ -70,10 +175,25 @@ const ShoppingCart = () => {
           onClick={onGroupIcon1Click}
         />
       </div>
-      <div className={styles.addToYour} onClick={onAddToYourClick}>
+      {showText && <div className={styles.addToYour} onClick={onAddToYourClick}>
         Add to your shopping list
-      </div>
-      <div className={styles.gSpaghettiNoodles}>800g spaghetti noodles</div>
+      </div> }
+      {!showText && <div className={styles.addToYour3} /*onClick={onAddToYourClick}*/>
+   
+      <input onChange={handleInputChange} className="contentEditable" ref={inputRef} placeholder="Enter item here" style={{
+        
+        border: '1px solid #ccc',
+        minHeight: '100px',
+        padding: '8px',
+        borderRadius: '4px',
+        
+
+
+       
+      }} />
+    
+    <div className={styles.addButton} onClick={handleAddToList}>Add</div>
+      </div> }
       <div className={styles.header}>
         <div className={styles.shoppingCart1}>
           <p className={styles.blankLine}>&nbsp;</p>
@@ -81,7 +201,7 @@ const ShoppingCart = () => {
           <p className={styles.blankLine}>&nbsp;</p>
         </div>
         <div className={styles.shoppingCart2}>
-          <p className={styles.blankLine}>[User]’s Shopping List</p>
+       
         </div>
       </div>
     </div>

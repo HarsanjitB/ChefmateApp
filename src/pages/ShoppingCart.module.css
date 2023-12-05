@@ -104,7 +104,7 @@
   width: 183px;
   height: 1px;
 }
-.add,
+
 .gSeaSalt {
   font-weight: 600;
   color: var(--colour-styles-neutral-colour-white);
@@ -117,14 +117,8 @@
   width: 135px;
   height: 29px;
 }
-.add {
-  top: 621px;
-  left: 285px;
-  font-size: var(--text-style-normal-text-bold-size);
-  width: 69px;
-  height: 27px;
-}
-.add,
+
+
 .image,
 .saved {
   position: absolute;
@@ -228,6 +222,30 @@
   height: 29px;
   cursor: pointer;
 }
+
+.addToYour2 {
+  position: absolute;
+  font-weight: 600;
+  display: inline-block;
+  top: 0%;
+  left: calc(50% - 104.5px);
+  color: var(--color-darkred);
+  width: 249px;
+  height: 29px;
+  cursor: pointer;
+}
+
+.addToYour3 {
+  top: calc(50% + 160px);
+  left: calc(50% - 118.5px);
+
+  position: absolute;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  width: 269px;
+  height: 125px;
+ 
+}
 .gSpaghettiNoodles {
   top: calc(50% - 236px);
   left: calc(50% - 108.5px);
@@ -273,3 +291,92 @@
   color: var(--color-whitesmoke-100);
   font-family: var(--text-style-smaller-text-small-label);
 }
+
+
+.add {
+  position: absolute;
+  top: 525px;
+  left: 64px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkred);
+  width: 269px;
+  height: 121px;
+}
+
+.textarea2 { 
+  border-style: none; 
+  border-color: Transparent; 
+  overflow: auto;        
+}
+
+.addButton{
+  top: 620px;
+  left: 285px;
+  font-size: var(--text-style-normal-text-bold-size);
+  width: 69px;
+  height: 27px;
+  cursor: pointer;
+  
+}
+
+
+.itemContainer {
+  margin-bottom: 5px; /* Space between each item and its horizontal bar */
+  width: 100%;
+}
+
+
+.item {
+  position: relative;
+  z-index: 0; 
+  background-color: #a00b0b; 
+  padding: 5px 10px; 
+  width: 200%;
+
+}
+
+.itemClicked {
+  position: relative;
+  z-index: 0; 
+  background-color: #26a00b; 
+  padding: 5px 10px; 
+  width: 200%; 
+
+}
+
+.dude{
+  align-items: center; 
+  justify-content: center; 
+  align-items: center; 
+ 
+
+}
+/* Style for the horizontal bar */
+
+.p2{
+  align-items: center; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+
+}
+
+
+.space {
+  margin-bottom: 150px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px; 
+}
+
+
+
+input{
+  width: 269px;
+  background-color: var(--color-darkred);
+  color: white;
+}
+
+input::placeholder {
+  color: white; 
+}
+
+
