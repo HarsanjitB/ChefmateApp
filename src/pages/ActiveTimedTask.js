@@ -5,6 +5,7 @@ import styles from "./ActiveTimedTask.module.css";
 import AddTimerButton from "../pages/AddTimerButton";
 import Timer from '../pages/Timer';
 import AddTimerPopup from '../pages/AddTimerPopup'; // Import the new component
+import { updateStepDescription } from "../Lists";
 
 const ActiveTimedTask = () => {
   const navigate = useNavigate();
@@ -12,11 +13,13 @@ const ActiveTimedTask = () => {
   const recipe = location.state.recipe;
 
   // Update the step notes in the recipe when the textarea loses focus
-const handleBlur = () => {
-  if (recipe && recipe.steps && recipe.steps[currentStepIndex]) {
-    recipe.steps[currentStepIndex].stepDescription = editableStepNotes;
-  }
-};
+  const handleBlur = () => {
+    if (recipe && recipe.steps && recipe.steps[currentStepIndex]) {
+      recipe.steps[currentStepIndex].stepDescription = editableStepNotes;
+      // Call the updateStepDescription function to update the step description in Lists.js
+      updateStepDescription(recipe.name, currentStepIndex, editableStepNotes);
+    }
+  };
 
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 

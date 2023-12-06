@@ -162,3 +162,22 @@ export var myRecipesList = [
   export var setCurrentRecipe = function(recipe) {
     currentRecipe = recipe;
 };
+
+export var updateStepDescription = function(recipeName, stepIndex, newDescription) {
+
+  // Find the recipe in the savedRecipesList array
+  const savedRecipe = savedRecipesList.find((r) => r.name === recipeName);
+
+  // If the recipe and the step exist, update the step description
+  if (savedRecipe && savedRecipe.steps && savedRecipe.steps[stepIndex]) {
+    savedRecipe.steps[stepIndex].stepDescription = newDescription;
+  }
+
+  // Find the recipe in the myRecipesList array
+  const myRecipe = myRecipesList.find((r) => r.name === recipeName);
+
+  // If the recipe and the step exist, update the step description
+  if (myRecipe && myRecipe.steps && myRecipe.steps[stepIndex]) {
+    myRecipe.steps[stepIndex].stepDescription = newDescription;
+  }
+};

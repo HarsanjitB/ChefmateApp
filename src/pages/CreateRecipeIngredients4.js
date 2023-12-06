@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import ActionListContainer from "../components/ActionListContainer";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +25,6 @@ const CreateRecipeIngredients4 = () => {
   const [ingredientName, setIngredientName] = useState("");
   const [ingredientAmount, setIngredientAmount] = useState("");
   const [currentList, setCurrentList] = useState('ingredients');
-  const [currentStep, setCurrentStep] = useState("");
   const [isAddStepOpen, setAddStepOpen] = useState(false);
   const [stepName, setStepName] = useState("");
   const [stepDescription, setStepDescription] = useState("");
@@ -33,7 +32,6 @@ const CreateRecipeIngredients4 = () => {
   const [stepMediaLink, setStepMediaLink] = useState("");
   const [stepIngredients, setStepIngredients] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [isIngredientDetailsOpen, setIsIngredientDetailsOpen] = useState(false);
 
   const [isActionListContainerOpen, setActionListContainerOpen] =
     useState(false);
@@ -47,17 +45,18 @@ const CreateRecipeIngredients4 = () => {
       time: recipeTime,
       rating: 0, // Set to 0 as per your requirement
       ingredients: ingredients,
-      steps: steps.map(step => ({
-        stepName: step.stepName,
-        stepDescription: step.stepDescription,
-        stepTime: step.stepTime,
-        stepImgPath: "", // Initialize to empty as per your requirement
-        ingList: step.stepIngredients
-      }))
+      steps: steps.map(step => {
+        return {
+          stepName: step.name,
+          stepDescription: step.description,
+          stepTime: step.time,
+          stepImgPath: step.mediaLink,
+          ingList: step.ingredients
+        };
+      }),
     };
   
     appendMyRecipes(currentRecipe);
-
     navigate("/my-recipes");
   }
 
