@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./RecipeIngredient2.module.css";
 import { currentRecipe } from "../Lists";
@@ -15,20 +15,24 @@ const addToCart = (input) => {
 }
 const RecipeIngredient2 = () => {
   const navigate = useNavigate();
+  const [currentList, setCurrentList] = useState('ingredients');
+
+
   const onBookmarkIconClick = useCallback(() => {
     appendSavedRecipes(currentRecipe);
     navigate("/recipe-saved");
   }, [navigate]);
+
   const onTabsContainer1Click = useCallback(() => {
-    navigate("/recipeingredient2");
-  }, [navigate]);
+    setCurrentList('steps');
+  }, []);
+
+  const onTabsContainer2Click = useCallback(() => {
+    setCurrentList('ingredients');
+  }, []);
 
   const onEditButtonClick = useCallback(() => {
     navigate("/create-recipe-ingredients", { state: { recipe: currentRecipe } });
-  }, [navigate, currentRecipe]);
-
-  const onTabsContainer2Click = useCallback(() => {
-    navigate("/ingredient-task", { state: { recipe: currentRecipe } });
   }, [navigate, currentRecipe]);
 
   const onIconNavBookmarkInactiveClick = useCallback(() => {
@@ -68,10 +72,16 @@ const RecipeIngredient2 = () => {
         </div>
       </div>
       <div className={styles.component3}>
-        <div className={styles.tabs}>
+        <div 
+          className={currentList === 'ingredients' ? `${styles.tabs} ${styles.tabSelected}` : `${styles.tabs} ${styles.tabUnselected}`} 
+          onClick={onTabsContainer2Click}
+        >
           <div className={styles.label}>Ingredients</div>
         </div>
-        <div className={styles.tabs1} onClick={onTabsContainer1Click}>
+        <div 
+          className={currentList === 'steps' ? `${styles.tabs1} ${styles.tabSelected}` : `${styles.tabs1} ${styles.tabUnselected}`} 
+          onClick={onTabsContainer1Click}
+        >
           <div className={styles.label}>Recipe Steps</div>
         </div>
       </div>
@@ -81,10 +91,10 @@ const RecipeIngredient2 = () => {
       <div className={styles.frameParent}>
         <div >
           <div className={styles.recipeWrapper}>
+            {currentList === 'ingredients' ? (
               <ul className={styles.recipe} >
                 {currentRecipe.ingredients.map((item,index) =>(
                   <li id = {index} >
-
                     <div className={styles.recipe1}>
                       <div className={styles.bg} />
                       <div className={styles.label5}>{item.amount}</div>
@@ -95,6 +105,20 @@ const RecipeIngredient2 = () => {
                   </li>
                 ))}
               </ul>
+            ) : (
+              <ul className={styles.recipe} >
+                {currentRecipe.steps.map((step,index) =>(
+                  <li id = {index} >
+                    <div className={styles.recipe1}>
+                      <div className={styles.stepName}>{index + 1}: {step.stepName}</div>
+                      <div className={styles.bg} >
+                        <div className={styles.stepDescription}>{step.stepDescription}</div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
@@ -172,100 +196,3 @@ const RecipeIngredient2 = () => {
 };
 
 export default RecipeIngredient2;
-
-/* <div className={styles.recipe1}>
-              <div className={styles.bg} />
-              <div className={styles.label3}>2</div>
-              <div className={styles.tomatos}>Tomatos</div>
-              <img className={styles.imageIcon1} alt="" src="/image5@2x.png" />
-              <img className={styles.imageIcon2} alt="" src="/image41.svg" />
-            </div>
-            <div className={styles.recipe1}>
-              <div className={styles.bg} />
-              <div className={styles.label4}>1/2</div>
-              <div className={styles.cabbage}>Cabbage</div>
-              <img className={styles.imageIcon3} alt="" src="/image6@2x.png" />
-              <img className={styles.imageIcon4} alt="" src="/image42.svg" />
-            </div>
-            <div className={styles.recipe1}>
-              <img className={styles.bgIcon} alt="" src="/bg.svg" />
-              <div className={styles.label5}>2 Slices</div>
-              <div className={styles.cheese}>Cheese</div>
-              <img className={styles.imageIcon3} alt="" src="/image7@2x.png" />
-              <img className={styles.imageIcon6} alt="" src="/image43.svg" />
-            </div>
-            <div className={styles.recipe1}>
-              <div className={styles.bg} />
-              <div className={styles.label6}>1 Small</div>
-              <div className={styles.label6}>1 Small</div>
-              <div className={styles.onions}>Onions</div>
-              <img className={styles.imageIcon3} alt="" src="/image7@2x.png" />
-              <img className={styles.imageIcon4} alt="" src="/image44.svg" />
-            </div>
-            <div className={styles.recipe1}>
-              <div className={styles.bg} />
-              <div className={styles.label8}>100 g</div>
-              <div className={styles.groundBeef}>Ground Beef</div>
-              <img className={styles.imageIcon3} alt="" src="/image8@2x.png" />
-              <img className={styles.imageIcon4} alt="" src="/image45.svg" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Green onion</div>
-              <img className={styles.imageIcon1} alt="" src="/image9@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Omelette</div>
-              <img className={styles.imageIcon1} alt="" src="/image10@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Hot Dog</div>
-              <img className={styles.imageIcon1} alt="" src="/image11@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Oninon</div>
-              <img className={styles.imageIcon1} alt="" src="/image1@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Lettuce</div>
-              <img className={styles.imageIcon1} alt="" src="/image12@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Spinach</div>
-              <img className={styles.imageIcon1} alt="" src="/image13@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>{`Red & Green Chilli`}</div>
-              <img className={styles.imageIcon1} alt="" src="/image14@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Fries</div>
-              <img className={styles.imageIcon1} alt="" src="/image15@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Chicken</div>
-              <img className={styles.imageIcon1} alt="" src="/image16@2x.png" />
-            </div>
-            <div className={styles.recipe9}>
-              <div className={styles.bg4} />
-              <div className={styles.label9}>300g</div>
-              <div className={styles.greenOnion}>Burger</div>
-              <img className={styles.imageIcon1} alt="" src="/image17@2x.png" />
-            </div> }*/

@@ -113,12 +113,12 @@ ul {
   position: absolute;
   top: 12px;
   border-radius: var(--br-3xs);
+  box-sizing: border-box;
   width: 150px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  box-sizing: border-box;
 }
 .tabs {
   left: 30px;
@@ -127,6 +127,8 @@ ul {
 }
 .tabs1 {
   left: 195px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-darkred);
   padding: var(--padding-5xs) var(--padding-4xs);
   cursor: pointer;
   color: var(--color-darkred);
@@ -163,6 +165,7 @@ ul {
   color: var(--colour-styles-neutral-colour-white);
 }
 .bg {
+  position: relative;
   top: 0;
   left: 0;
   border-radius: var(--br-xs);
@@ -170,6 +173,7 @@ ul {
   width: 304px;
   height: 76px;
   opacity: 0.5;
+  overflow: auto;
 }
 .label3,
 .tomatos {
@@ -654,4 +658,33 @@ ul {
   font-size: var(--text-style-smaller-text-regular-size);
   color: var(--colour-styles-neutral-colour-black);
   font-family: var(--text-style-smaller-text-small-label);
+}
+.tabSelected {
+  background-color: var(--color-darkred);
+  color: white;
+}
+.tabUnselected {
+  background-color: white;
+  color: var(--color-darkred);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-darkred);
+}
+.stepName {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-weight: 600;
+  color: black;
+}
+
+.stepDescription {
+  position: absolute;
+  top: 23px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 400;
+  color: black;
+  overflow-y: auto;
+  max-height: 300px; /* Adjust this value based on your needs */
+  text-align: left;
 }
