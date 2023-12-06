@@ -1,21 +1,58 @@
 import { useState, useCallback } from "react";
-import ActiveTimedTaskGreyedOut from "../components/ActiveTimedTaskGreyedOut";
-import PortalPopup from "../components/PortalPopup";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styles from "./ActiveTimedTask.module.css";
+import AddTimerButton from "../pages/AddTimerButton";
+import Timer from '../pages/Timer';
+import AddTimerPopup from '../pages/AddTimerPopup'; // Import the new component
 
 const ActiveTimedTask = () => {
-  const [isActiveTimedTaskGreyedOutOpen, setActiveTimedTaskGreyedOutOpen] =
-    useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const recipe = location.state.recipe;
+  
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+
+  const [timers, setTimers] = useState([
+    // Add more timers as needed
+  ]);
+
+  const closeAddTimerPopup = useCallback(() => {
+    setAddTimerPopupOpen(false);
+  }, []);
+
+  const onAddTimer = useCallback((duration) => {
+    // Add a new timer to the timers array with the specified duration
+    setTimers([...timers, { name: 'New Timer', duration }]);
+    closeAddTimerPopup();
+  }, [timers, closeAddTimerPopup]);
+
+  const onDeleteTimer = useCallback((index) => {
+    // Remove the timer at the specified index from the timers array
+    const updatedTimers = [...timers];
+    updatedTimers.splice(index, 1);
+    setTimers(updatedTimers);
+  }, [timers]);
+
+  const [isAddTimerPopupOpen, setAddTimerPopupOpen] = useState(false);
+
+  const openAddTimerPopup = useCallback(() => {
+    setAddTimerPopupOpen(true);
+  }, []);
 
   const onVuesaxlineararrowLeftIconClick = useCallback(() => {
-    navigate("/recipe-complete");
-  }, [navigate]);
+    if (currentStepIndex + 1 >= recipe.steps.length) {
+      // If there are no more steps, navigate to the recipe complete page
+      navigate("/recipe-complete");
+    } else {
+      // Otherwise, go to the next step
+      setCurrentStepIndex((prevIndex) => prevIndex + 1);
+    }
+  }, [navigate, currentStepIndex, recipe]);
 
   const onVuesaxlineararrowLeftIcon1Click = useCallback(() => {
-    navigate(-1);
-  }, [navigate]);
+    setCurrentStepIndex((prevIndex) => prevIndex - 1);
+  }, []);
 
   const openActiveTimedTaskGreyedOut = useCallback(() => {
     setActiveTimedTaskGreyedOutOpen(true);
@@ -25,16 +62,29 @@ const ActiveTimedTask = () => {
     setActiveTimedTaskGreyedOutOpen(false);
   }, []);
 
-  const onTimersContainer1Click = useCallback(() => {
-    navigate("/active-timed-task-greyed-out");
-  }, [navigate]);
+  // Update the step, stepNotesContent, mediaSectionIconSrc, stepTime, stepName, and ingredients variables
+  const step = `Step ${currentStepIndex + 1}`;
+  
+  let stepNotesContent = " ";
+  if (recipe && recipe.steps && recipe.steps[currentStepIndex]) {
+    stepNotesContent = recipe.steps[currentStepIndex].stepDescription || " ";
+  }
+
+  const mediaSectionIconSrc = "/media-section1@2x.png"; // Placeholder image
+  const stepTime = recipe.steps[currentStepIndex].stepTime;
+  const stepName = recipe.steps[currentStepIndex].stepName;
+  const ingredients = recipe.ingredients.filter(ingredient => 
+    recipe.steps[currentStepIndex].ingList.includes(ingredient.name)
+  );
 
   return (
     <>
-      <div className={styles.activeTimedTask}>
-        <div className={styles.smallButton}>
-          <div className={styles.label}>Start Timer [2m]</div>
-        </div>
+      <div className={styles.activeTimedTask} style={{ backgroundColor: stepTime <= 0 || stepTime === null ? 'var(--color-lightgreen)' : '' }}>
+        {stepTime && stepTime > 0 && (
+          <div className={styles.smallButton} onClick={() => onAddTimer(stepTime * 60)}>
+            <div className={styles.label}>Start Timer [{stepTime}]</div>
+          </div>
+        )}
         <div className={styles.content}>
           <img
             className={styles.vuesaxlineararrowLeftIcon}
@@ -44,29 +94,30 @@ const ActiveTimedTask = () => {
           />
           <div className={styles.stepNotesSection}>
             <div className={styles.stepNotes}>
-              Make sure to use lots of oil for a nice brown, and make sure the
-              pan is nice and hot before you cook!
+              {stepNotesContent}
             </div>
           </div>
           <img
             className={styles.mediaSectionIcon}
             alt=""
-            src="/media-section@2x.png"
+            src={mediaSectionIconSrc}
           />
           <div className={styles.ingredientSection}>
             <div className={styles.ingredientSection1}>
               <div className={styles.ingredients}>
                 <div className={styles.ingredientsForStep}>
-                  <div className={styles.recipe2}>
-                    <div className={styles.bg} />
-                    <div className={styles.quantity}>As Needed</div>
-                    <div className={styles.name}>Oil</div>
-                    <img
-                      className={styles.imageIcon}
-                      alt=""
-                      src="/image3@2x.png"
-                    />
-                  </div>
+                  {ingredients.map((ingredient, index) => (
+                    <div className={styles.recipe2} key={index}>
+                      <div className={styles.bg} />
+                      <div className={styles.quantity}>{ingredient.quantity}</div>
+                      <div className={styles.name}>{ingredient.name}</div>
+                      <img
+                        className={styles.imageIcon}
+                        alt=""
+                        src={ingredient.imageSrc}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -75,8 +126,10 @@ const ActiveTimedTask = () => {
             </div>
           </div>
           <div className={styles.stepOverviewSection}>
-            <div className={styles.stepOverview}>(Time: ~10 minutes)</div>
-            <div className={styles.stepOverview1}>Cook Pancake Batter</div>
+          {stepTime && stepTime > 0 && (
+              <div className={styles.stepOverview}>(Time: ~{stepTime} minutes)</div>
+          )}
+            <div className={styles.stepOverview1}>{stepName}</div>
           </div>
           <div className={styles.header}>
             <img
@@ -91,57 +144,21 @@ const ActiveTimedTask = () => {
               src="/vuesaxlinearmore2.svg"
               onClick={openActiveTimedTaskGreyedOut}
             />
-            <div className={styles.stepNumber}>Step n</div>
+            <div className={styles.stepNumber}>{step}</div>
           </div>
         </div>
-        <div className={styles.timers} onClick={onTimersContainer1Click}>
+        <div className={styles.timers}>
           <div className={styles.timers1}>
-            <div className={styles.noTimerSample}>No Timers Active</div>
-            <div className={styles.timer}>
-              <div className={styles.bg1} />
-              <img
-                className={styles.maskGroupIcon}
-                alt=""
-                src="/mask-group1@2x.png"
-              />
-              <div className={styles.timeRemaining}>30s</div>
-              <div className={styles.timerName}>Pancake</div>
-            </div>
-            <div className={styles.timer1}>
-              <div className={styles.bg1} />
-              <img
-                className={styles.maskGroupIcon}
-                alt=""
-                src="/mask-group2@2x.png"
-              />
-              <div className={styles.timeRemaining}>60s</div>
-              <div className={styles.timerName}>Pancake</div>
-            </div>
-            <div className={styles.timer2}>
-              <div className={styles.bg1} />
-              <img
-                className={styles.maskGroupIcon}
-                alt=""
-                src="/mask-group3@2x.png"
-              />
-              <div className={styles.timeRemaining}>7m</div>
-              <div className={styles.timerName}>Boil Water</div>
-            </div>
-          </div>
-          <div className={styles.addTimer}>
-            <div className={styles.addTimerText}>+</div>
+            {timers.map((timer, index) => (
+              <Timer key={index} name={timer.name} duration={timer.duration} onDelete={() => onDeleteTimer(index)} />
+            ))}
+            <AddTimerButton onClick={openAddTimerPopup} />
           </div>
         </div>
+        {isAddTimerPopupOpen && (
+          <AddTimerPopup onClose={closeAddTimerPopup} onAddTimer={onAddTimer} />
+        )}
       </div>
-      {isActiveTimedTaskGreyedOutOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closeActiveTimedTaskGreyedOut}
-        >
-          <ActiveTimedTaskGreyedOut onClose={closeActiveTimedTaskGreyedOut} />
-        </PortalPopup>
-      )}
     </>
   );
 };

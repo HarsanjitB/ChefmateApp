@@ -19,8 +19,22 @@ export var savedRecipesList = [
       , steps: [
         {
           stepName: "First Thing"
-          , stepDescription: "Make food do this first"
-          ,stepTime: "5 min"
+          ,stepDescription: "Make food do this first"
+          ,stepTime: "5"
+          ,stepImgPath: ""
+          ,ingList: ["Tomatoes"]
+        },
+        {
+          stepName: "Cut tomatoes"
+          , stepDescription: "The next step"
+          ,stepTime: "0"
+          , stepImgPath: ""
+          ,ingList: ["Lettuce"]
+        },
+        {
+          stepName: "Last thing"
+          , stepDescription: ""
+          ,stepTime: "10"
           , stepImgPath: ""
           ,ingList: ["Tomatoes"]
         }

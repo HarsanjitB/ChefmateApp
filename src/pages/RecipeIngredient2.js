@@ -23,8 +23,8 @@ const RecipeIngredient2 = () => {
   }, [navigate]);
 
   const onTabsContainer2Click = useCallback(() => {
-    navigate("/ingredient-task");
-  }, [navigate]);
+    navigate("/ingredient-task", { state: { recipe: currentRecipe } });
+  }, [navigate, currentRecipe]);
 
   const onIconNavBookmarkInactiveClick = useCallback(() => {
     navigate("/saved-recipe");

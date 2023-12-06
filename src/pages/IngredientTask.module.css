@@ -74,6 +74,7 @@
   align-self: stretch;
   flex: 1;
   position: relative;
+  max-height: 85px;
 }
 .bg1 {
   position: absolute;

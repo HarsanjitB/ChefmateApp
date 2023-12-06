@@ -72,15 +72,10 @@ const CreateRecipeIngredients3 = () => {
       </div>
       <div className={styles.checkBold} />
       <img className={styles.checkBoldIcon} alt="" src="/checkbold.svg" />
-      <div className={styles.checkBold1} />
       <div className={styles.untimedTask}>Untimed Task</div>
       <div className={styles.timedActiveTaskContainer}>
         <p className={styles.timed}>Timed</p>
-        <p className={styles.timed}>Active Task</p>
-      </div>
-      <div className={styles.timedInactiveTaskContainer}>
-        <p className={styles.timed}>Timed</p>
-        <p className={styles.timed}>InActive Task</p>
+        <p className={styles.timed}> Task</p>
       </div>
       <div className={styles.groupParent}>
         <div className={styles.imageParent}>
