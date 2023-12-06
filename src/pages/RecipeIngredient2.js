@@ -31,6 +31,10 @@ const RecipeIngredient2 = () => {
     setCurrentList('ingredients');
   }, []);
 
+  const onStartCookingClicked = useCallback(() => {
+    navigate("/ingredient-task", { state: { recipe: currentRecipe } });
+  }, [navigate, currentRecipe]);
+
   const onEditButtonClick = useCallback(() => {
     navigate("/create-recipe-ingredients", { state: { recipe: currentRecipe } });
   }, [navigate, currentRecipe]);
@@ -48,7 +52,7 @@ const RecipeIngredient2 = () => {
   }, [navigate]);
 
   const onVuesaxlineararrowLeftIconClick = useCallback(() => {
-    navigate("/saved-recipe");
+    navigate(-1);
   }, [navigate]);
 
   return (
@@ -85,7 +89,7 @@ const RecipeIngredient2 = () => {
           <div className={styles.label}>Recipe Steps</div>
         </div>
       </div>
-      <div className={styles.tabs2} onClick={onTabsContainer2Click}>
+      <div className={styles.tabs2} onClick={onStartCookingClicked}>
         <div className={styles.label}>Start Interactive Cooking</div>
       </div>
       <div className={styles.frameParent}>

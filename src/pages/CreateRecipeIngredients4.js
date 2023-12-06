@@ -110,7 +110,7 @@ const CreateRecipeIngredients4 = () => {
   }, [navigate]);
 
   const onVuesaxlineararrowLeftIconClick = useCallback(() => {
-    navigate("/my-recipes");
+    navigate(-1);
   }, [navigate]);
 
   const openActionListContainer = useCallback(() => {
