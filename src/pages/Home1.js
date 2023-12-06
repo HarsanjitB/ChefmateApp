@@ -226,7 +226,7 @@ const Home1 = () => {
             <div className={styles.frame15}>
               <div className={styles.minuteMealsThatAreQuickAnParent}>
                 <div className={styles.minuteMealsThat}>
-                  15-minute meals that are quick and easy to make
+                  15-minute meals that are quick to make
                 </div>
                 <div className={styles.quickBites}>Quick Bites</div>
                 {/* <div className={styles.readyToCook}>
