@@ -67,7 +67,38 @@ export var groceryList = [
   { text: 'shredded cheddar', clicked: false },
   { text: '400g sea salt', clicked: false },
 ];
-
+export var myRecipesList = [
+    {
+      name: "Traditional Spare Ribs Baked",
+      imgPath: "/rectangle-6467@2x.png",
+      time: "20 min",
+      rating: "5",
+      ingredients: [
+        {name: "Tomatoes",
+        amount: "2"}
+        ,{name: "Onions",
+        amount: "1/2"}
+        ,{name: "Cheese ",
+        amount: "2 Slices"}
+        ,{name: "Ribs",
+        amount: "200 g"}
+        ,{name: "parsley",
+        amount: "100 g"}
+      ]
+      , steps: [
+        {
+          stepName: "First Thing"
+          , stepDescription: "Make food do this first"
+          ,stepTime: "5 min"
+          , stepImgPath: ""
+          ,ingList: ["Tomatoes"]
+        }
+      ]
+    }
+  ]
+  export var appendMyRecipes = function(recipe) {
+    myRecipesList.push(recipe)
+};
 
 
   export var currentRecipe = {

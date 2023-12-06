@@ -1,11 +1,13 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./MyRecipes.module.css";
-
+import { myRecipesList } from "../Lists";
+import { setCurrentRecipe } from "../Lists";
 const MyRecipes = () => {
   const navigate = useNavigate();
 
-  const onCardsContainerClick = useCallback(() => {
+  const onCardsContainerClick = useCallback((id) => {
+    setCurrentRecipe(myRecipesList[id])
     navigate("/recipeingredient1");
   }, [navigate]);
 
@@ -37,8 +39,45 @@ const MyRecipes = () => {
     <div className={styles.myRecipes}>
       <div className={styles.myRecipesChild} />
       <div className={styles.myRecipes1}>My Recipes</div>
-      <div className={styles.cards}>
-        <div className={styles.cards1} onClick={onCardsContainerClick}>
+      <div >
+        <ul className={styles.cards} >
+              {myRecipesList.map((item,index) =>(
+                <li id = {index} onClick={() => onCardsContainerClick(index)}>
+                  <div >
+                  <div className={styles.card}>
+                    <img className={styles.cardChild} alt="" src={item.imgPath} />
+                    <div className={styles.cardItem} />
+                    <div className={styles.bookmark}>
+                    <div className={styles.bookmarkChild} />
+                    <img
+                      className={styles.image23Icon}
+                      alt=""
+                      src="/image-23@2x.png"
+                    />
+                  </div>
+                    <img className={styles.bookmarkIcon} alt="" src="/bookmark2.svg" />
+                    <div className={styles.rating}>
+                      <img className={styles.starIcon} alt="" src="/star.svg" />
+                      <div className={styles.div}>4.0</div>
+                    </div>
+                    <div className={styles.foodTitle}>
+                      {item.name}
+                    </div>
+                    <div className={styles.time}>
+                      <img
+                        className={styles.vuesaxoutlinetimerIcon}
+                        alt=""
+                        src="/vuesaxoutlinetimer1.svg"
+                      />
+                      <div className={styles.div}>{item.time}</div>
+                    </div>
+                  </div>
+                  </div>
+                  
+                </li>
+              ))}
+            </ul>
+        {/* <div className={styles.cards1} onClick={onCardsContainerClick}>
           <div className={styles.card}>
             <img
               className={styles.cardChild}
@@ -101,8 +140,8 @@ const MyRecipes = () => {
               <div className={styles.div}>20 min</div>
             </div>
           </div>
-        </div>
-        <div className={styles.cards3} onClick={onCardsContainer2Click}>
+        </div> */}
+        {/* <div className={styles.cards3} onClick={onCardsContainer2Click}>
           <div className={styles.card}>
             <img
               className={styles.cardChild}
@@ -133,7 +172,7 @@ const MyRecipes = () => {
               <div className={styles.div}>20 min</div>
             </div>
           </div>
-        </div>
+        </div> */}
         <img
           className={styles.cardsChild}
           alt=""
