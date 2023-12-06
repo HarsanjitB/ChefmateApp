@@ -37,6 +37,7 @@ const Login = () => {
         variant="outlined"
       />
       <TextField
+        type="password"
         className={styles.inputField1}
         color="error"
         label="Enter Password"

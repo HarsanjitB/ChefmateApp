@@ -75,13 +75,15 @@ Terms & Conditions and Privacy Policy.  We promise to keep your data safe and 
       </div>
       <div className={styles.createAnAccountItem} />
       <TextField
+        type="password"
         className={styles.inputField}
         color="error"
-        label="Enter Passwrod"
+        label="Enter Password"
         sx={{ width: 315 }}
         variant="outlined"
       />
       <TextField
+        type="password"
         className={styles.inputField1}
         color="error"
         label="Retype Password"
