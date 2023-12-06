@@ -3,6 +3,15 @@ import { useNavigate } from "react-router-dom";
 import styles from "./RecipeIngredient2.module.css";
 import { currentRecipe } from "../Lists";
 import { appendSavedRecipes } from "../Lists";
+import { groceryList } from "../Lists";
+
+
+const addToCart = (input) => {
+ 
+  groceryList.push({ text: input.amount +" "+ input.name, clicked: false })
+  console.log(input.name);
+  
+}
 const RecipeIngredient2 = () => {
   const navigate = useNavigate();
   const onBookmarkIconClick = useCallback(() => {
@@ -76,7 +85,7 @@ const RecipeIngredient2 = () => {
                       <div className={styles.label5}>{item.amount}</div>
                       <div className={styles.tomatos}>{item.name}</div>
                       <img className={styles.imageIcon1} alt="" src="/image7@2x.png" />
-                      <img className={styles.imageIcon2} alt="" src="/image41.svg" />
+                      <img className={styles.imageIcon2} alt="" src="/image41.svg"  onClick={() => addToCart(item)}/>
                     </div>
                   </li>
                 ))}

@@ -8,10 +8,10 @@ export var savedRecipesList = [
         {name: "Tomatoes",
         amount: "2"}
         ,{name: "Cabbage",
-        amount: "1/2"}
+        amount: "1/2 Head"}
         ,{name: "Cheese ",
         amount: "2 Slices"}
-        ,{name: "Chicken Breast",
+        ,{name: "Chicken Leg",
         amount: "200 g"}
         ,{name: "Penne Pasta",
         amount: "100 g"}
@@ -35,12 +35,12 @@ export var savedRecipesList = [
           {name: "Tomatoes",
           amount: "2"}
           ,{name: "Cabbage",
-          amount: "1/2"}
+          amount: "1/2 Head"}
           ,{name: "Cheese ",
           amount: "2 Slices"}
-          ,{name: "Chicken Breast",
+          ,{name: "Chicken Leg",
           amount: "200 g"}
-          ,{name: "Penne Pasta",
+          ,{name: "Brown Rice",
           amount: "100 g"}
         ]
         , steps: [
@@ -57,6 +57,19 @@ export var savedRecipesList = [
   export var appendSavedRecipes = function(recipe) {
     savedRecipesList.push(recipe)
 };
+
+export var groceryList = [
+  
+  { text: '600g crushed tomatoes', clicked: false },
+  { text: '400g ground beef', clicked: false },
+  { text: '6 eggs', clicked: false },
+  { text: '8 taco shells', clicked: false },
+  { text: 'shredded cheddar', clicked: false },
+  { text: '400g sea salt', clicked: false },
+];
+
+
+
   export var currentRecipe = {
     name: "Chicken Pasta With Tomato and Spinach",
     imgPath: "/image40@2x.png",
@@ -66,10 +79,10 @@ export var savedRecipesList = [
       {name: "Tomatoes",
       amount: "2"}
       ,{name: "Cabbage",
-      amount: "1/2"}
+      amount: "1/2 head"}
       ,{name: "Cheese ",
       amount: "2 Slices"}
-      ,{name: "Chicken Breast",
+      ,{name: "Chicken Legs",
       amount: "200 g"}
       ,{name: "Penne Pasta",
       amount: "100 g"}
@@ -84,6 +97,8 @@ export var savedRecipesList = [
       }
     ]
   };
+
+
   export var setCurrentRecipe = function(recipe) {
     currentRecipe = recipe;
 };

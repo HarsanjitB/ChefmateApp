@@ -11,6 +11,7 @@ import {
   TrailingActions,
 } from 'react-swipeable-list';
 import 'react-swipeable-list/dist/styles.css';
+import { groceryList } from "../Lists";
 
 
 
@@ -37,14 +38,9 @@ const ShoppingCart = () => {
   const [showText, setShowText] = useState(true);
   const [inputValue, setInputValue] = useState('');
   const location = useLocation();
-  const [items, setList] = useState([
-    { text: '600g crushed tomatoes', clicked: false },
-    { text: '400g ground beef', clicked: false },
-    { text: '6 eggs', clicked: false },
-    { text: '8 taco shells', clicked: false },
-    { text: 'shredded cheddar', clicked: false },
-    { text: '400g sea salt', clicked: false },
-  ]);
+  const [items, setList] = useState(
+   groceryList
+  );
   
 
   const inputRef = useRef();
@@ -102,6 +98,7 @@ const ShoppingCart = () => {
     const updatedItems = [...items];
     updatedItems[index].clicked = !updatedItems[index].clicked;
     setList(updatedItems);
+    console.log(updatedItems)
   };
   
   return (
