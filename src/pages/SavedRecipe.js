@@ -4,11 +4,16 @@ import styles from "./SavedRecipe.module.css";
 import { savedRecipesList } from "../Lists";
 import { currentRecipe } from "../Lists";
 import { setCurrentRecipe } from "../Lists";
+import { deleteSavedRecipe } from "../Lists";
 const SavedRecipe = () => {
   const navigate = useNavigate();
 
   const onCreateRecipesClick = useCallback(() => {
     navigate("/my-recipes");
+  }, [navigate]);
+  const onDeleteRecipe= useCallback((id) => {
+    deleteSavedRecipe(id)
+    navigate("/saved-recipe");
   }, [navigate]);
 
   const onCardsContainerClick = useCallback((id) => {
@@ -35,17 +40,17 @@ const SavedRecipe = () => {
         {/* <div className={styles.cards1} onClick={onCardsContainerClick}> */}
           <ul className={styles.cards1} >
             {savedRecipesList.map((item,index) =>(
-              <li id = {index} onClick={() => onCardsContainerClick(index)}>
+              <li id = {index} >
                 <div >
-                <div className={styles.card}>
-                  <img className={styles.cardChild} alt="" src={item.imgPath} />
+                <div className={styles.card} >
+                  <img  className={styles.cardChild} alt="" src={item.imgPath}  />
                   <div className={styles.cardItem} />
-                  <img className={styles.bookmarkIcon} alt="" src="/bookmark2.svg" />
+                  <img className={styles.bookmarkIcon} alt="" src="/bookmark2.svg" onClick={() => onDeleteRecipe(index)} />
                   <div className={styles.rating}>
                     <img className={styles.starIcon} alt="" src="/star.svg" />
                     <div className={styles.div}>4.0</div>
                   </div>
-                  <div className={styles.foodTitle}>
+                  <div className={styles.foodTitle} onClick={() => onCardsContainerClick(index)}>
                     {item.name}
                   </div>
                   <div className={styles.time}>

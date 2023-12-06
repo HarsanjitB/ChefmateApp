@@ -71,6 +71,10 @@ export var savedRecipesList = [
   export var appendSavedRecipes = function(recipe) {
     savedRecipesList.push(recipe)
 };
+export var deleteSavedRecipe = function(i) {
+  savedRecipesList.splice(i,1)
+};
+
 
 export var groceryList = [
   
