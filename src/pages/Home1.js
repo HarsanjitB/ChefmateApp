@@ -145,7 +145,7 @@ const Home1 = () => {
         <div className={styles.frameParent}>
           <div className={styles.frameGroup}>
             <div className={styles.savedParent}>
-              <div className={styles.saved}>Saved</div>
+              
               <img
                 className={styles.iconnavbookmarkinactive}
                 alt=""
@@ -156,7 +156,7 @@ const Home1 = () => {
             <div className={styles.frame4}>
               <img className={styles.frameChild} alt="" src="/group-872.svg" />
               <div className={styles.cartParent}>
-                <div className={styles.cart}>Cart</div>
+                
                 <img
                   className={styles.iconCartAlt}
                   alt=""

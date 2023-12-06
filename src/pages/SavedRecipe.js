@@ -79,7 +79,7 @@ const SavedRecipe = () => {
         <div className={styles.imageParent}>
           <div className={styles.image} />
           <div className={styles.savedParent}>
-            <div className={styles.saved}>Saved</div>
+            <div className={styles.saved}></div>
             <img
               className={styles.iconnavbookmarkinactive}
               alt=""
@@ -88,7 +88,7 @@ const SavedRecipe = () => {
             />
           </div>
           <div className={styles.cartParent} onClick={onGroupContainer1Click}>
-            <div className={styles.cart}>Cart</div>
+            <div className={styles.cart}></div>
             <img
               className={styles.iconCartAlt}
               alt=""

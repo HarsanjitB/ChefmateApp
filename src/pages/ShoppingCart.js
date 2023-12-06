@@ -156,7 +156,7 @@ const ShoppingCart = () => {
         <div className={styles.imageParent}>
           <div className={styles.image} />
           <div className={styles.savedParent}>
-            <div className={styles.saved}>Saved</div>
+            <div className={styles.saved}></div>
             <img
               className={styles.iconnavbookmarkinactive}
               alt=""
@@ -165,7 +165,7 @@ const ShoppingCart = () => {
             />
           </div>
           <div className={styles.cartParent}>
-            <div className={styles.cart}>Cart</div>
+            <div className={styles.cart}></div>
             <img
               className={styles.iconCartAlt}
               alt=""
