@@ -30,7 +30,9 @@ const IngredientTask = () => {
         <div className={styles.stepNotes}>
           <ul className={styles.gatherAllNeededIngredients}>
             <li className={styles.gatherAllNeeded}>
-              Gather all needed ingredients
+                - This textbox contains notes from the recipe creator.
+                <br></br>
+                - Feel free to add your own notes to each recipe step for the next time you cook this dish!
             </li>
           </ul>
         </div>

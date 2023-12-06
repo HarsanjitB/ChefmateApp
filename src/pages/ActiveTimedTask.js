@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styles from "./ActiveTimedTask.module.css";
@@ -10,7 +10,14 @@ const ActiveTimedTask = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const recipe = location.state.recipe;
-  
+
+  // Update the step notes in the recipe when the textarea loses focus
+const handleBlur = () => {
+  if (recipe && recipe.steps && recipe.steps[currentStepIndex]) {
+    recipe.steps[currentStepIndex].stepDescription = editableStepNotes;
+  }
+};
+
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   const [timers, setTimers] = useState([
@@ -51,8 +58,14 @@ const ActiveTimedTask = () => {
   }, [navigate, currentStepIndex, recipe]);
 
   const onVuesaxlineararrowLeftIcon1Click = useCallback(() => {
-    setCurrentStepIndex((prevIndex) => prevIndex - 1);
-  }, []);
+    if (currentStepIndex == 0) {
+      // If there are no more steps, navigate to the ingredient task page
+      navigate("/ingredient-task", { state: { recipe } });
+    } else {
+      // Otherwise, go to the previous step
+      setCurrentStepIndex((prevIndex) => prevIndex - 1);
+    }
+  }, [navigate, currentStepIndex, recipe]);
 
   const openActiveTimedTaskGreyedOut = useCallback(() => {
     setActiveTimedTaskGreyedOutOpen(true);
@@ -70,13 +83,19 @@ const ActiveTimedTask = () => {
     stepNotesContent = recipe.steps[currentStepIndex].stepDescription || " ";
   }
 
+  // Update the editable step notes whenever stepNotesContent changes
+  useEffect(() => {
+    setEditableStepNotes(stepNotesContent);
+  }, [stepNotesContent]);
+  const [editableStepNotes, setEditableStepNotes] = useState(stepNotesContent);
+
   const mediaSectionIconSrc = "/media-section1@2x.png"; // Placeholder image
   const stepTime = recipe.steps[currentStepIndex].stepTime;
   const stepName = recipe.steps[currentStepIndex].stepName;
   const ingredients = recipe.ingredients.filter(ingredient => 
     recipe.steps[currentStepIndex].ingList.includes(ingredient.name)
   );
-
+  
   return (
     <>
       <div className={styles.activeTimedTask} style={{ backgroundColor: stepTime <= 0 || stepTime === null ? 'var(--color-lightgreen)' : '' }}>
@@ -93,9 +112,12 @@ const ActiveTimedTask = () => {
             onClick={onVuesaxlineararrowLeftIconClick}
           />
           <div className={styles.stepNotesSection}>
-            <div className={styles.stepNotes}>
-              {stepNotesContent}
-            </div>
+          <textarea
+            className={styles.stepNotes}
+            value={editableStepNotes}
+            onChange={(e) => setEditableStepNotes(e.target.value)}
+            onBlur={handleBlur}
+          />
           </div>
           <img
             className={styles.mediaSectionIcon}

@@ -15,7 +15,8 @@
   left: calc(50% - 161px);
   background-color: var(--colour-styles-neutral-colour-gray-4);
   width: 320px;
-  height: 117.9px;
+  height: 113.9px;
+  border-radius: 8px;
 }
 .navBarMenu {
   position: absolute;
@@ -31,7 +32,7 @@
   left: calc(50% - 41px);
   font-weight: 600;
   display: inline-block;
-  width: 83px;
+  width: 150px;
   height: 15.6px;
 }
 .image {
@@ -56,8 +57,22 @@
   width: 194px;
   height: 30.4px;
 }
+.timeTitle {
+  position: absolute;
+  font-weight: 600;
+}
+.timeTitle {
+  top: calc(50% + 180px);
+  left: calc(50% - 155px);
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 194px;
+  height: 30.4px;
+}
 .description {
-  top: calc(50% + 64px);
+  top: calc(50% + 100px);
   left: calc(50% - 154px);
 }
 .card {
@@ -67,6 +82,7 @@
   width: 320px;
   height: 170px;
   font-size: var(--text-style-small-text-regular-size);
+  border-radius: 4px;
 }
 .label {
   flex: 1;
@@ -99,7 +115,7 @@
   color: var(--color-darkred);
 }
 .component3 {
-  top: calc(50% - 40px);
+  top: calc(50% - 30px);
   left: calc(50% - 191.5px);
   background-color: var(--colour-styles-neutral-colour-white);
   width: 378px;
@@ -120,6 +136,7 @@
   background-color: var(--colour-styles-neutral-colour-gray-4);
   width: 315px;
   height: 76px;
+  padding-bottom: 12px;
   opacity: 0.5;
 }
 .imageIcon {
@@ -129,16 +146,23 @@
   height: 52px;
   cursor: pointer;
 }
-.addIngredient {
+.ingredientName {
   position: absolute;
   top: 27px;
   left: 83px;
+  font-weight: 600;
+}
+.ingredientAmount {
+  position: absolute;
+  top: 27px;
+  left: 270px;
   font-weight: 600;
 }
 .recipe12 {
   position: relative;
   width: 315px;
   height: 76px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 .recipe {
@@ -152,10 +176,10 @@
 }
 .recipeWrapper {
   position: absolute;
-  top: calc(50% + 11px);
+  top: calc(50% + 30px);
   left: calc(50% - 162.5px);
   width: 315px;
-  height: 248px;
+  height: 230px;
   overflow-y: auto;
   font-size: var(--text-style-normal-text-bold-size);
   color: var(--colour-styles-label-colour);
@@ -191,7 +215,7 @@
 .component5,
 .component6 {
   position: absolute;
-  top: calc(50% - 77px);
+  top: calc(50% - 57px);
   left: calc(50% - 155.5px);
   border-radius: var(--br-3xs);
   background-color: var(--colour-styles-neutral-colour-white);
@@ -207,19 +231,54 @@
 .component6 {
   left: calc(50% - 63.5px);
 }
-.createRecipeIngredientsItem {
+.createRecipeIngredientsItemName {
   position: absolute;
-  top: calc(50% - 142px);
+  top: calc(50% - 180px);
   left: calc(50% - 155.5px);
   border-radius: var(--br-xs);
   background-color: var(--color-whitesmoke-300);
   width: 316px;
   height: 44px;
 }
-.writeHere {
+.createRecipeIngredientsItemDescription {
   position: absolute;
-  top: calc(50% - 129px);
+  top: calc(50% - 112px);
+  left: calc(50% - 155.5px);
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-300);
+  width: 316px;
+  height: 44px;
+}
+.writeHereDescription {
+  position: absolute;
+  top: calc(50% - 112px);
   left: calc(50% - 145.5px);
+  width: 291px;
+  height: 40px;
+  background-color: var(--color-whitesmoke-300);
+  border: none;
+  color: black; /* Added font color */
+}
+.writeHereName {
+  position: absolute;
+  top: calc(50% - 178px);
+  left: calc(50% - 145.5px);
+  width: 291px;
+  height: 40px;
+  background-color: var(--color-whitesmoke-300);
+  border: none;
+  color: black; /* Added font color */
+}
+.writeHereTime {
+  position: absolute;
+  top: calc(50% - 63px);
+  left: calc(50% - 75.5px);
+  width: 60px;
+  height: 40px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-300);
+  border: none;
+  color: black; /* Added font color */
 }
 .tabs2 {
   top: calc(50% + 268px);
@@ -368,4 +427,167 @@
   font-size: var(--text-style-smaller-text-regular-size);
   color: var(--colour-styles-neutral-colour-black);
   font-family: var(--text-style-smaller-text-small-label);
+}
+.ingredientInput,
+.amountInput {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  display: inline-block;
+  width: 100px; /* adjust as needed */
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.addButton {
+  background-color: #008000; /* Green */
+}
+
+.addButton:hover {
+  background-color: #006400;
+}
+
+.deleteButton {
+  background-color: #FF0000; /* Red */
+}
+
+.deleteButton:hover {
+  background-color: #B22222;
+}
+
+.cancelButton {
+  background-color: #FFA500; /* Orange */
+}
+
+.cancelButton:hover {
+  background-color: #FF8C00;
+}
+
+.addButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.portalPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(113, 113, 113, 0.3);
+}
+
+.popupContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredientInput,
+.amountInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+
+.tabSelected {
+  background-color: var(--color-darkred);
+  color: white;
+}
+
+.tabUnselected {
+  background-color: white;
+  color: var(--color-darkred);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-darkred);
+}
+.popupContentSteps {
+  height: 60vh; /* Make the popup taller */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.stepIngredients {
+  border: 1px solid grey; /* Add a grey outline */
+  padding: 5px; /* Add some padding */
+  border-radius: 10px; /* Add rounded corners */
+  margin-bottom: 10px;
+  max-height: 160px;
+  /* Add other styles as needed */
+}
+
+.stepIngredient, .stepIngredientAdded {
+  background-color: #d0d0d0; /* Add a grey background */
+  border-radius: 5px; /* Add rounded corners */
+  margin-bottom: 5px;
+  /* Add other styles as needed */
+}
+
+.stepIngredientAdded {
+  background-color: green; /* Make the background green */
+  color: white; /* Make the text white */
+  /* Add other styles as needed */
 }

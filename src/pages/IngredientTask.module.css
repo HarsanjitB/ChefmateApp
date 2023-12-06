@@ -8,10 +8,11 @@
 }
 .gatherAllNeeded {
   margin-bottom: 0;
+  margin-left: 0;
+  font-size: small;
 }
 .gatherAllNeededIngredients {
   margin: 0;
-  padding-left: 19px;
 }
 .stepNotes {
   position: absolute;

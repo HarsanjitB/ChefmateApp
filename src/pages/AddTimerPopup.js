@@ -44,7 +44,6 @@ function AddTimerPopup({ onClose, onAddTimer }) {
                             type="number" 
                             value={minutes} 
                             onChange={(e) => setMinutes(e.target.value)} 
-                            required 
                             style={{ 
                                 padding: '10px',
                                 borderRadius: '5px',
@@ -62,7 +61,6 @@ function AddTimerPopup({ onClose, onAddTimer }) {
                             type="number" 
                             value={seconds} 
                             onChange={(e) => setSeconds(e.target.value)} 
-                            required 
                             style={{ 
                                 padding: '10px',
                                 borderRadius: '5px',

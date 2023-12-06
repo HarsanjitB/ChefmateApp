@@ -2,6 +2,7 @@ export var savedRecipesList = [
     {
       name: "Chicken Pasta With Tomato and Spinach",
       imgPath: "/image40@2x.png",
+      description: "Sample description",
       time: "20 min",
       rating: "5",
       ingredients: [
@@ -37,12 +38,20 @@ export var savedRecipesList = [
           ,stepTime: "10"
           , stepImgPath: ""
           ,ingList: ["Tomatoes"]
+        },
+        {
+          stepName: "Hello!!!"
+          , stepDescription: "Example desc"
+          ,stepTime: "0"
+          , stepImgPath: ""
+          ,ingList: ["Tomatoes", "Potatoes"]
         }
       ]
     },
     {
         name: "Spice Roasted Chicken with Flavoured rice",
         imgPath: "/rectangle-6468@2x.png",
+        description: "Sample description",
         time: "30 min",
         rating: "5",
         ingredients: [
@@ -89,6 +98,7 @@ export var myRecipesList = [
     {
       name: "Traditional Spare Ribs Baked",
       imgPath: "/rectangle-6467@2x.png",
+      description: "Sample description",
       time: "20 min",
       rating: "5",
       ingredients: [
@@ -122,6 +132,7 @@ export var myRecipesList = [
   export var currentRecipe = {
     name: "Chicken Pasta With Tomato and Spinach",
     imgPath: "/image40@2x.png",
+    description: "Sample description",
     time: "20 min",
     rating: "5",
     ingredients: [
