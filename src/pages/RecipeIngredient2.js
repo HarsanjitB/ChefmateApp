@@ -6,6 +6,7 @@ import { appendSavedRecipes } from "../Lists";
 import { groceryList } from "../Lists";
 
 
+
 const addToCart = (input) => {
  
   groceryList.push({ text: input.amount +" "+ input.name, clicked: false })
@@ -21,6 +22,10 @@ const RecipeIngredient2 = () => {
   const onTabsContainer1Click = useCallback(() => {
     navigate("/recipeingredient2");
   }, [navigate]);
+
+  const onEditButtonClick = useCallback(() => {
+    navigate("/create-recipe-ingredients", { state: { recipe: currentRecipe } });
+  }, [navigate, currentRecipe]);
 
   const onTabsContainer2Click = useCallback(() => {
     navigate("/ingredient-task", { state: { recipe: currentRecipe } });
@@ -90,7 +95,85 @@ const RecipeIngredient2 = () => {
                   </li>
                 ))}
               </ul>
-            {/* <div className={styles.recipe1}>
+          </div>
+        </div>
+      </div>
+      <img className={styles.component4Icon} alt="" src="/component-4.svg" />
+      <div className={styles.groupParent}>
+        <div className={styles.imageParent}>
+          <div className={styles.image} />
+          <div className={styles.savedParent}>
+            <div className={styles.saved}></div>
+            <img
+              className={styles.iconnavbookmarkinactive}
+              alt=""
+              src="/iconnavbookmarkinactive3.svg"
+              onClick={onIconNavBookmarkInactiveClick}
+            />
+          </div>
+          <div className={styles.cartParent} onClick={onGroupContainer2Click}>
+            <div className={styles.cart}></div>
+            <img
+              className={styles.iconCartAlt}
+              alt=""
+              src="/-icon-cart-alt1.svg"
+            />
+          </div>
+          <img
+            className={styles.groupChild}
+            alt=""
+            src="/group-871.svg"
+            onClick={onGroupIconClick}
+          />
+        </div>
+        <img className={styles.groupItem} alt="" src="/group-952.svg" />
+      </div>
+      <div className={styles.foodTitleParent}>
+        <div className={styles.foodTitle}>
+          {currentRecipe.name}
+        </div>
+        <button 
+          style={{ 
+            backgroundColor: 'grey', 
+            borderRadius: '10px', 
+            float: 'right', 
+            border: 'none',
+            width: '120px',
+            height: '30px',
+          }} 
+          onClick={onEditButtonClick}
+        >
+          Edit this recipe
+        </button>
+      </div>
+      <div className={styles.groupContainer}>
+        <div className={styles.buttonFilterWrapper}>
+          <div className={styles.buttonFilterWrapper}>
+            <div className={styles.buttonFilterChild} />
+            <img
+              className={styles.multimediaEqualizer}
+              alt=""
+              src="/multimedia--equalizer.svg"
+            />
+          </div>
+        </div>
+        <div className={styles.header}>
+          <img
+            className={styles.vuesaxlineararrowLeftIcon}
+            alt=""
+            src="/vuesaxlineararrowleft4.svg"
+            onClick={onVuesaxlineararrowLeftIconClick}
+          />
+          <div className={styles.title}>Ingrident</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RecipeIngredient2;
+
+/* <div className={styles.recipe1}>
               <div className={styles.bg} />
               <div className={styles.label3}>2</div>
               <div className={styles.tomatos}>Tomatos</div>
@@ -185,68 +268,4 @@ const RecipeIngredient2 = () => {
               <div className={styles.label9}>300g</div>
               <div className={styles.greenOnion}>Burger</div>
               <img className={styles.imageIcon1} alt="" src="/image17@2x.png" />
-            </div> */}
-          </div>
-        </div>
-      </div>
-      <img className={styles.component4Icon} alt="" src="/component-4.svg" />
-      <div className={styles.groupParent}>
-        <div className={styles.imageParent}>
-          <div className={styles.image} />
-          <div className={styles.savedParent}>
-            <div className={styles.saved}></div>
-            <img
-              className={styles.iconnavbookmarkinactive}
-              alt=""
-              src="/iconnavbookmarkinactive3.svg"
-              onClick={onIconNavBookmarkInactiveClick}
-            />
-          </div>
-          <div className={styles.cartParent} onClick={onGroupContainer2Click}>
-            <div className={styles.cart}></div>
-            <img
-              className={styles.iconCartAlt}
-              alt=""
-              src="/-icon-cart-alt1.svg"
-            />
-          </div>
-          <img
-            className={styles.groupChild}
-            alt=""
-            src="/group-871.svg"
-            onClick={onGroupIconClick}
-          />
-        </div>
-        <img className={styles.groupItem} alt="" src="/group-952.svg" />
-      </div>
-      <div className={styles.foodTitleParent}>
-        <div className={styles.foodTitle}>
-          {currentRecipe.name}
-        </div>
-      </div>
-      <div className={styles.groupContainer}>
-        <div className={styles.buttonFilterWrapper}>
-          <div className={styles.buttonFilterWrapper}>
-            <div className={styles.buttonFilterChild} />
-            <img
-              className={styles.multimediaEqualizer}
-              alt=""
-              src="/multimedia--equalizer.svg"
-            />
-          </div>
-        </div>
-        <div className={styles.header}>
-          <img
-            className={styles.vuesaxlineararrowLeftIcon}
-            alt=""
-            src="/vuesaxlineararrowleft4.svg"
-            onClick={onVuesaxlineararrowLeftIconClick}
-          />
-          <div className={styles.title}>Ingrident</div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default RecipeIngredient2;
+            </div> }*/

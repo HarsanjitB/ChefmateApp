@@ -271,3 +271,20 @@
   color: var(--colour-styles-neutral-colour-black);
   font-family: var(--text-style-smaller-text-small-label);
 }
+.cardContainer {
+  margin-bottom: 10px; /* Adjust this value as needed */
+}
+.deleteButton {
+  position: absolute;
+  top: 10px; /* Adjust this value as needed */
+  right: 10px; /* Adjust this value as needed */
+  z-index: 1; /* Make the button appear above everything else */
+  border-radius: 6px; /* Make the button round */
+  border: 2px solid black; /* Add a thick outline to the button */
+  /* Add other styles as needed */
+  font-weight: bold; /* Make the font thicker */
+  padding: 4px 8px; /* Make the button a bit bigger */
+}
+.deleteButtonClicked {
+  background-color: red;
+}

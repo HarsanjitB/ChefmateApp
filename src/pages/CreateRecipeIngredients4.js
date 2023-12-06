@@ -3,19 +3,28 @@ import ActionListContainer from "../components/ActionListContainer";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
 import styles from "./CreateRecipeIngredients4.module.css";
-import { appendSavedRecipes } from '../Lists';
+import { appendMyRecipes } from '../Lists';
+import { useLocation } from 'react-router-dom';
 
 const CreateRecipeIngredients4 = () => {
-
-  const [recipeName, setRecipeName] = useState("");
-  const [recipeDescription, setRecipeDescription] = useState("");
-  const [recipeTime, setRecipeTime] = useState("");
+  const location = useLocation();
+  const recipe = location.state?.recipe;
+  
+  const [recipeName, setRecipeName] = useState(recipe?.name || "");
+  const [recipeDescription, setRecipeDescription] = useState(recipe?.description || "");
+  const [recipeTime, setRecipeTime] = useState(recipe?.time || "");
+  const [ingredients, setIngredients] = useState(recipe?.ingredients || []);
+  const [steps, setSteps] = useState(recipe?.steps.map(step => ({
+    name: step.stepName,
+    description: step.stepDescription,
+    time: step.stepTime,
+    mediaLink: step.stepImgPath,
+    ingredients: step.ingList
+  })) || []);
   const [isAddIngredientOpen, setAddIngredientOpen] = useState(false);
   const [ingredientName, setIngredientName] = useState("");
   const [ingredientAmount, setIngredientAmount] = useState("");
-  const [ingredients, setIngredients] = useState([]);
   const [currentList, setCurrentList] = useState('ingredients');
-  const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState("");
   const [isAddStepOpen, setAddStepOpen] = useState(false);
   const [stepName, setStepName] = useState("");
@@ -47,9 +56,9 @@ const CreateRecipeIngredients4 = () => {
       }))
     };
   
-    appendSavedRecipes(currentRecipe);
+    appendMyRecipes(currentRecipe);
 
-    navigate("/saved-recipe");
+    navigate("/my-recipes");
   }
 
   const onRecipe12ContainerClick = useCallback(() => {
@@ -92,6 +101,10 @@ const CreateRecipeIngredients4 = () => {
   const openAddStep = () => {
     setAddStepOpen(true);
   };
+
+  const handleCancelButtonClick = useCallback(() => {
+    navigate(-1); // Navigate back to the last page
+  }, [navigate]);
 
   const onIconNavBookmarkInactiveClick = useCallback(() => {
     navigate("/saved-recipe");
@@ -203,6 +216,15 @@ const CreateRecipeIngredients4 = () => {
           {currentList === 'ingredients' ? (
             // Render the ingredients list
             <>
+            <div className={styles.recipe12} onClick={openAddIngredientForm}>
+                <div className={styles.bg} />
+                <img
+                  className={styles.imageIcon}
+                  alt=""
+                  src="/image39.svg"
+                />
+                <div className={styles.ingredientName}>Add Ingredient</div>
+              </div>
               {ingredients.map((ingredient, index) => (
                 <div 
                   key={index} 
@@ -224,18 +246,19 @@ const CreateRecipeIngredients4 = () => {
                   <div className={styles.ingredientAmount}>{ingredient.amount}</div>
                 </div>
               ))}
-              <div className={styles.recipe12} onClick={openAddIngredientForm}>
+              
+            </>
+          ) : (
+            <>
+            <div className={styles.recipe12} onClick={openAddStepForm}>
                 <div className={styles.bg} />
                 <img
                   className={styles.imageIcon}
                   alt=""
                   src="/image39.svg"
                 />
-                <div className={styles.ingredientName}>Add Ingredient</div>
+                <div className={styles.ingredientName}>Add Step</div>
               </div>
-            </>
-          ) : (
-            <>
               {steps.map((step, index) => (
                 <div 
                   key={index} 
@@ -276,15 +299,7 @@ const CreateRecipeIngredients4 = () => {
                   )}
                 </div>
               ))}
-              <div className={styles.recipe12} onClick={openAddStepForm}>
-                <div className={styles.bg} />
-                <img
-                  className={styles.imageIcon}
-                  alt=""
-                  src="/image39.svg"
-                />
-                <div className={styles.ingredientName}>Add Step</div>
-              </div>
+              
             </>
           )}
         </div>
@@ -307,8 +322,13 @@ const CreateRecipeIngredients4 = () => {
           value={recipeTime}
           onChange={(e) => setRecipeTime(e.target.value)}
         />
-        <div className={styles.tabs2} onClick={handleSaveButtonClick}>
+        <div className={styles.buttonsContainer}>
+        <div className={`${styles.button} ${styles.tabs2}`} onClick={handleSaveButtonClick}>
           <div className={styles.label}>Save</div>
+        </div>
+        <div className={`${styles.button} ${styles.tabs2} ${styles.cancelButton}`} onClick={handleCancelButtonClick}>
+          <div className={styles.label}>Cancel</div>
+        </div>
         </div>
         <div className={styles.groupParent}>
           <div className={styles.imageParent}>
@@ -366,7 +386,7 @@ const CreateRecipeIngredients4 = () => {
           onOutsideClick={closeAddIngredient}
         >
           <div className={styles.popupContent}>
-            <form onSubmit={handleAddIngredient}>
+            <form className={styles.formContainer} onSubmit={handleAddIngredient}>
               <input
                 className={styles.ingredientInput}
                 value={ingredientName}

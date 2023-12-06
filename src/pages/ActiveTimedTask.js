@@ -92,9 +92,17 @@ const handleBlur = () => {
   const mediaSectionIconSrc = "/media-section1@2x.png"; // Placeholder image
   const stepTime = recipe.steps[currentStepIndex].stepTime;
   const stepName = recipe.steps[currentStepIndex].stepName;
-  const ingredients = recipe.ingredients.filter(ingredient => 
-    recipe.steps[currentStepIndex].ingList.includes(ingredient.name)
-  );
+  let ingredients = [];
+  if (
+    recipe &&
+    recipe.steps &&
+    recipe.steps[currentStepIndex] &&
+    recipe.steps[currentStepIndex].ingList
+  ) {
+    ingredients = recipe.ingredients.filter((ingredient) =>
+      recipe.steps[currentStepIndex].ingList.includes(ingredient.name)
+    );
+  }
   
   return (
     <>

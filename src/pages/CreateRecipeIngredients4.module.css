@@ -270,7 +270,7 @@
   color: black; /* Added font color */
 }
 .writeHereTime {
-  position: absolute;
+  position: relative;
   top: calc(50% - 63px);
   left: calc(50% - 75.5px);
   width: 60px;
@@ -281,8 +281,6 @@
   color: black; /* Added font color */
 }
 .tabs2 {
-  top: calc(50% + 268px);
-  left: calc(50% - 164.5px);
   border-radius: var(--br-3xs);
   background-color: var(--color-darkred);
   width: 320px;
@@ -296,9 +294,13 @@
   text-align: center;
   color: var(--colour-styles-neutral-colour-white);
 }
+.tabs2, .cancelButton {
+  width: 150px; /* Adjust this value as needed */
+  margin: 0 10px;
+  /* Other styles */
+}
 .image1,
-.saved,
-.tabs2 {
+.saved {
   position: absolute;
 }
 .image1 {
@@ -439,6 +441,8 @@
 .buttonContainer {
   display: flex;
   justify-content: space-between;
+  max-width: 100%;
+  
 }
 
 .button {
@@ -590,4 +594,32 @@
   background-color: green; /* Make the background green */
   color: white; /* Make the text white */
   /* Add other styles as needed */
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.button {
+  border-radius: var(--br-3xs); /* Adjust this value as needed */
+  font-size: 16px; /* Adjust this value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 25px;
+  width: 200px; /* Adjust this value as needed */
+  /* Add other common styles as needed */
+}
+.cancelButton {
+  width: 80px;
+}
+.formContainer {
+  max-width: 100%;
+  width: 100%;
+  /* other styles... */
 }
